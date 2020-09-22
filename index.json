@@ -1,6 +1,6 @@
 {
     "factions": {
-        "romans": {"name": "Romans", "id": "romans", "url": "romans.json", "color": "#D32929"}
+        "romans": {"name": "Romans", "id": "romans", "url": "romans.json", "color": "#9f0807"}
     },
     "alliances": {},
     "categories": {
