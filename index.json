@@ -64,7 +64,7 @@
             "hidden": true,
             "description_short": "+1 Resist",
             "description": "This model gets +1 Resist",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+            "points": ["constants.defenseCost", {"multiply": "model.wounds"}]
         },
         "light_armor": {
             "name": "Light Armor",
