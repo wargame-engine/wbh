@@ -19,32 +19,6 @@
     },
     "relics": [],
     "powers": {},
-    "hidden_strategies": {
-        "divine_intervention": {
-            "name": "Divine Intervention (Core)",
-            "flavor": "It seems luck has gone our way. Or maybe it's something more...",
-            "description": "Re-roll a single skill test die. It may not be re-rolled again.",
-            "cost": 1
-        },
-        "legendary_support": {
-            "name": "Legendary Support (Core)",
-            "flavor": "A battle involving several legends is a story to be told.",
-            "description": "You may include one additional legend in your roster.",
-            "cost": 1
-        },
-        "incredible_courage": {
-            "name": "Incredible Courage (Core)",
-            "flavor": "Even in the darkest of times, moments of great courage can occur.",
-            "description": "Once per battle, choose a unit that is about to take a Courage test. For that test, this unit is treated as having Courage 9.",
-            "cost": 2
-        },
-        "battlefield_reserves": {
-            "name": "Battlefield Reserves (Core)",
-            "flavor": "Sometimes assets are most useful in reserves, waiting for their moment to strike.",
-            "description": "Up to 3 units, one point for each may be placed in reserves instead of deployed on the field. At the beginning of any round, it may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 10\" from enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
-            "cost": "1/2/3"
-        }
-    },
     "strategies": {
 
     },
