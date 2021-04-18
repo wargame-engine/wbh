@@ -20,36 +20,13 @@
     "relics": [],
     "powers": {},
     "strategies": {
-        "divine_intervention": {
-            "name": "Divine Intervention (Core)",
-            "flavor": "It seems luck has gone our way. Or maybe it's something more...",
-            "description": "Re-roll a single skill test die. It may not be re-rolled again.",
-            "cost": 1
-        },
-        "legendary_support": {
-            "name": "Legendary Support (Core)",
-            "flavor": "A battle involving several legends is a story to be told.",
-            "description": "You may include one additional legend in your roster.",
-            "cost": 1
-        },
-        "incredible_courage": {
-            "name": "Incredible Courage (Core)",
-            "flavor": "Even in the darkest of times, moments of great courage can occur.",
-            "description": "Once per battle, choose a unit that is about to take a Courage test. For that test, this unit is treated as having Courage 9.",
-            "cost": 2
-        },
-        "battlefield_reserves": {
-            "name": "Battlefield Reserves (Core)",
-            "flavor": "Sometimes assets are most useful in reserves, waiting for their moment to strike.",
-            "description": "Up to 3 units, one point for each may be placed in reserves instead of deployed on the field. At the beginning of any round, it may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 10\" from enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
-            "cost": "1/2/3"
-        }
+
     },
     "weapons": {
         "unarmed": {"name": "Unarmed", "attacks": 1, "short": "Melee"},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
-        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, {"id": "reach", "x": 2}]},
-        "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, "cumbersome", {"id": "reach", "x": 4}]},
+        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 2}]},
+        "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 4}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "javelin": {"name": "Javelin", "attacks": 1, "short": 12, "ap": 1},
         "heavy_throwing_spear": {"name": "Heavy Throwing Spear", "attacks": 1, "short": 12, "ap": 2},
@@ -59,110 +36,8 @@
         "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
-        "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2},
-        "heirloom_sword": {"name": "Heirloom Sword", "attacks": 3, "short": "Melee", "ap": 3, "damage": 2}
+        "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2}
     },
     "rules": {
-        "shield": {
-            "name": "Shield",
-            "hidden": true,
-            "description_short": "+1 Resist",
-            "description": "This model gets +1 Resist",
-            "points": ["constants.defenseCost", {"multiply": "model.wounds"}]
-        },
-        "light_armor": {
-            "name": "Light Armor",
-            "hidden": true,
-            "description_short": "+1 Resist",
-            "description": "This model gets +1 Resist",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
-        },
-        "cumbersome": {"name": "Cumbersome", "description": "This model hits with this weapon at -1 Strength when fighting in engagement range.", "effects": [{"type": "alterStatWithWeapon", "statName": "fight", "value": -1}]},
-        "phalanx": {
-            "name": "Phalanx",
-            "inputs": ["x"],
-            "description": "You may make one free attack with this weapon when a unit moves into your engagement range.",
-            "effects": [{"type": "freeAttacksWithWeapon", "weapon": "impact", "attacks": "x", "frequency": 10}]
-        },
-        "impact": {
-            "name": "Impact",
-            "inputs": ["x"],
-            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with no AP.",
-            "effects": [{"type": "freeAttacks", "weapon": "impact", "attacks": "x"}]
-        },
-        "banner": {
-            "name": "Banner",
-            "description": "This model and friendly Infantry units within 3\" reroll failed Strength tests of 9+.",
-            "effects": [{"frequency": 5, "type": "alterStat", "statName": "fight", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
-        },
-        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
-        "fate": {"name": "Fate", "inputs": ["x"], "description": "This model may re-roll X Resist tests per attack.", "effects": [{"type": "invulnerable", "value": "x"}]},
-        "character": {
-            "name": "Character",
-            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). If it is an Infantry unit it may not be targeted while another friendly non-character Infantry unit is within 3\". Friendly units within 3\" may use this model's Courage value."
-        },
-        "scout": {
-            "name": "Scout",
-            "description": "When this unit is deployed on the field, it may make a free 5\" move.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 5, "frequency": 2}]
-        },
-        "agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
-        "rending": {"name": "Rending", "description": "Hit rolls of 1 or 2 have +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 2}]},
-        "fear": {"name": "Fear", "description": "Enemy units within 6\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "range": 12, "frequency": 5, "target": "enemy"}]},
-        "fearless": {
-            "name": "Fearless",
-            "description": "This unit requires an extra suppression to take break tests.",
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 2.5}]
-        },
-        "commander_field_orders": {
-            "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
-                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
-            ]
-        },
-        "field_orders": {
-            "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
-            ]
-        },
-        "reach": {
-            "name": "Reach",
-            "inputs": ["x"],
-            "description": "This weapon may engage and fight models up to X\" away. Enemy models must still move into base contact unless they also have reach.",
-            "effects": [
-                {"type": "alterStat", "statName": "movement", "value": "x", "frequency": 5}
-            ]
-        },
-        "furious": {
-            "name": "Furious",
-            "description": "When this model charges, hit rolls of 1 or 2 generate an additional attack.",
-            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "fight"}]
-        },
-        "stealth": {
-            "name": "Stealth",
-            "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
-            "effects": [{"type": "stealth", "value": 1}]
-        },
-        "poison": {
-            "name": "Poison",
-            "inputs": ["x"],
-            "description": "Successful hit rolls of 1 or 2 with this weapon cause X hits instead of 1.",
-            "effects": [{"type": "poison", "value": "x", "frequency": 2}]
-        },
-        "psychic": {
-            "name": "Psychic",
-            "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
-            "effects": [{"type": "psychic", "value": "x"}]
-        },
-        "sling_volley": {
-            "name": "Sling Volley",
-            "description": "If this unit stays put during their turn, they can fire twice into short range.",
-            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "shoot"}]
-        }
     }
 }
