@@ -51,7 +51,11 @@
         "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, {"id": "reach", "x": 2}]},
         "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, "cumbersome", {"id": "reach", "x": 4}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
+        "javelin": {"name": "Javelin", "attacks": 1, "short": 12, "ap": 1},
+        "heavy_throwing_spear": {"name": "Heavy Throwing Spear", "attacks": 1, "short": 12, "ap": 2},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
+        "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 18, "ap": 1, "rules": ["sling_volley"]},
+        "trained_sling": {"name": "Trained Sling", "attacks": 2, "short": 24, "ap": 2, "rules": ["sling_volley"]},
         "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
@@ -154,6 +158,11 @@
             "inputs": ["x"],
             "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "effects": [{"type": "psychic", "value": "x"}]
+        },
+        "sling_volley": {
+            "name": "Sling Volley",
+            "description": "If this unit stays put during their turn, they can fire twice into short range.",
+            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "shoot"}]
         }
     }
 }
