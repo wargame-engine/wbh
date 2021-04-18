@@ -51,8 +51,8 @@
     "weapons": {
         "unarmed": {"name": "Unarmed", "attacks": 1, "short": "Melee"},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
-        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, {"id": "reach", "x": 2}]},
-        "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "phalanx", "x": 1}, "cumbersome", {"id": "reach", "x": 4}]},
+        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 2}]},
+        "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 4}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
