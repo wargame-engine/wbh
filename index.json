@@ -64,16 +64,16 @@
         "shield": {
             "name": "Shield",
             "hidden": true,
-            "description_short": "+1 Resist",
-            "description": "This model gets +1 Resist",
-            "points": ["constants.defenseCost", {"multiply": "model.wounds"}]
+            "description_short": "+1 Save",
+            "description": "This model gets +1 Save",
+            "points": ["constants.defenseCost"]
         },
         "light_armor": {
             "name": "Light Armor",
             "hidden": true,
-            "description_short": "+1 Resist",
-            "description": "This model gets +1 Resist",
-            "points": ["constants.defenseCost", {"multiply": "model.wounds"}]
+            "description_short": "+1 Save",
+            "description": "This model gets +1 Save",
+            "points": ["constants.defenseCost"]
         }
     }
 }
