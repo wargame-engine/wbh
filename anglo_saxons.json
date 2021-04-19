@@ -1,6 +1,14 @@
 {
     "id": "anglo_saxons",
     "name": "Anglo Saxons",
+    "subfactions": {
+        "merica": {
+            "name": "Merica",
+            "phase": "activation",
+            "id": "merica",
+            "background": "Merica Mercia Mercia."
+        }
+    },
     "units": {
         "low_bordweall": {
             "name": "Low Bordweall",
@@ -9,7 +17,9 @@
             "min": 1,
             "max": 1,
             "rules": [],
-            "keywords": ["Infantry"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Ceorl",
@@ -20,7 +30,9 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear"],
+                    "weapons": [
+                        "spear"
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -33,7 +45,9 @@
             "min": 1,
             "max": 1,
             "rules": [],
-            "keywords": ["Infantry"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Thegn",
@@ -44,7 +58,9 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear"],
+                    "weapons": [
+                        "spear"
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -57,7 +73,9 @@
             "min": 1,
             "max": 1,
             "rules": [],
-            "keywords": ["Infantry"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Gebur",
@@ -68,10 +86,21 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["javelin"],
+                    "weapons": [
+                        "javelin"
+                    ],
                     "options": [
-                        {"addRule": "shield"},
-                        {"replaceWeapon": "javelin", "withWeapon": ["spear", "bow", "sling"]}
+                        {
+                            "addRule": "shield"
+                        },
+                        {
+                            "replaceWeapon": "javelin",
+                            "withWeapon": [
+                                "spear",
+                                "bow",
+                                "sling"
+                            ]
+                        }
                     ],
                     "notes": "Add special rules here",
                     "rules": [],
@@ -87,7 +116,9 @@
             "min": 1,
             "max": 1,
             "rules": [],
-            "keywords": ["Infantry"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Huscarl",
@@ -98,8 +129,14 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "weapons": [
+                        "spear"
+                    ],
+                    "options": [
+                        {
+                            "addWeapon": "javelin"
+                        }
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -108,5 +145,13 @@
     },
     "weapons": {},
     "rules": {},
-    "relics": []
+    "relics": [],
+    "strategies": [{
+        "subfactions": ["merica", "wessex", "kent"],
+        "name": "Shield Wall",
+        "phase": "activation",
+        "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+        "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+        "cost": 1
+    }] 
 }
