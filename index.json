@@ -32,8 +32,8 @@
         "javelin": {"name": "Javelins", "attacks": 1, "short": 12, "ap": 1},
         "heavy_throwing_spear": {"name": "Heavy Throwing Spears", "attacks": 1, "short": 12, "ap": 2},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
-        "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 18, "ap": 1, "rules": ["sling_volley"]},
-        "trained_sling": {"name": "Trained Sling", "attacks": 2, "short": 24, "ap": 2, "rules": ["sling_volley"]},
+        "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "sling_volley"}]},
+        "trained_sling": {"name": "Trained Sling", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "sling_volley"}]},
         "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
@@ -45,14 +45,30 @@
             "hidden": true,
             "description_short": "+1 Save",
             "description": "This model gets +1 Save",
-            "points": ["constants.defenseCost"]
-        },
+            "points": ["constants.defenseCost"]},
         "light_armor": {
             "name": "Light Armor",
             "hidden": true,
             "description_short": "+1 Save",
             "description": "This model gets +1 Save",
-            "points": ["constants.defenseCost"]
-        }
+            "points": ["constants.defenseCost"]},
+        "sling_volley": {
+                "name": "Sling Volley",
+                "hidden": false,
+                "description_short": "Double fire at half range",
+                "description": "This model can fire twice at short range or 12 inches.",
+                "points": ["constants.shootCost"]},
+        "skirmisher": {
+                "name": "Skirmisher",
+                "hidden": false,
+                "description_short": "+1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
+                "description": "This unit is part of a spread out formation, which means it can more easily dodge incoming missiles, but is more vunerable to being rushed by infantry.",
+                "points": [1]},
+        "light_infantry": {
+                    "name": "Light Infantry",
+                    "hidden": false,
+                    "description_short": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
+                    "description": "This unit can choose to fight as skirmishers as a loose formation, or 'close up' to fight as traditional infantry.",
+                    "points": [2]}
     }
 }

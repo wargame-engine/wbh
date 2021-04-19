@@ -6,20 +6,33 @@
             "name": "Merica",
             "phase": "activation",
             "id": "merica",
-            "background": "Merica Mercia Mercia."
+            "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
+        }
+    ,
+        "wessex": {
+            "name": "Wessex",
+            "phase": "activation",
+            "id": "wessex",
+            "background": "From the 800s to late 1000s, with the arrival of the Normons, this was the dominant kingdom. Wessex had such power, that after 900, kingdoms like Kent and Sussex were simply 'Greater Wessex'."
+        }
+    ,
+        "late_kent": {
+            "name": "Kent (793-1066)",
+            "phase": "activation",
+            "id": "late_kent",
+            "background": "Late Kent was a weaker, less accomplished, but proud kingdom."
         }
     },
     "units": {
         "low_bordweall": {
-            "name": "Low Bordweall",
-            "description": "A band of freemen, who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "name": "Ceorl Bordweall",
+            "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "subfactions": ["merica", "wessex", "late_kent"],
             "category": "infantry",
             "min": 1,
             "max": 1,
             "rules": [],
-            "keywords": [
-                "Infantry"
-            ],
+            "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Ceorl",
@@ -30,17 +43,17 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": [
-                        "spear"
-                    ],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
         "great_bordweall": {
-            "name": "Great Bordweall",
+            "name": "Thegn Bordweall",
             "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "subfactions": ["wessex", "late_kent"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -58,9 +71,36 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [
-                        "spear"
-                    ],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Merican_thegn": {
+            "name": "Merican Thegn Bordweall",
+            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "subfactions": ["merica"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Thegn",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_infantry"}],
                     "min": 5,
                     "max": 10
                 }
@@ -72,9 +112,9 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": [],
+            "rules": ["skirmisher"],
             "keywords": [
-                "Infantry"
+                "Infantry", "Skirmisher"
             ],
             "models": [
                 {
@@ -83,8 +123,8 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 4,
-                    "defense": 6,
-                    "reflexes": 6,
+                    "defense": 5,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [
                         "javelin"
@@ -147,11 +187,18 @@
     "rules": {},
     "relics": [],
     "strategies": [{
-        "subfactions": ["merica", "wessex", "kent"],
+        "subfactions": ["merica", "wessex", "late_kent"],
         "name": "Shield Wall",
         "phase": "activation",
-        "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
-        "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+        "description": "All units with shields and spears equipped (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
+        "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
+        "cost": 1
+    },{
+        "subfactions": ["wessex"],
+        "name": "Veterans",
+        "phase": "activation",
+        "description": "All units of thegn may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
         "cost": 1
     }] 
 }
