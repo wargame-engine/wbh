@@ -1,37 +1,94 @@
 {
-    "id": "anglo_saxons",
-    "name": "Anglo Saxons",
+    "id": "saxons",
+    "name": "Saxons",
     "subfactions": {
-        "merica": {
-            "name": "Merica",
+        "early_saxon kingdoms": {
+            "name": "Early Saxon Kingdoms (400s-600s AD)",
             "phase": "activation",
-            "id": "merica",
+            "id": "early_saxon kingdoms",
             "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
         }
     ,
-        "wessex": {
-            "name": "Wessex",
+        "sea_raiders": {
+            "name": "Sea Raiders",
             "phase": "activation",
-            "id": "wessex",
-            "background": "From the 800s to late 1000s, with the arrival of the Normons, this was the dominant kingdom. Wessex had such power, that after 900, kingdoms like Kent and Sussex were simply 'Greater Wessex'."
+            "id": "sea_raiders",
+            "background": "Barbarian Invasion"
         }
     ,
-        "late_kent": {
-            "name": "Kent (793-1066)",
+        "heptarchy": {
+            "name": "Saxon Kingdoms of the Heptarchy (600-700 AD)",
             "phase": "activation",
-            "id": "late_kent",
-            "background": "Late Kent was a weaker, less accomplished, but proud kingdom."
+            "id": "heptarchy",
+            "background": "Kent, Wessex, Sussex, Essex."
         }
     },
     "units": {
-        "low_bordweall": {
-            "name": "Ceorl Bordweall",
-            "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
-            "subfactions": ["merica", "wessex", "late_kent"],
+        "ceorl": {
+            "name": "Ceorl",
+            "description": "A band of freemen/ceorls (Pronouced Churls),",
+            "subfactions": ["heptarchy"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband"],
+            "rules": ["warband", "buckler"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceorl",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"replaceRule": [[{"id":"buckler"}]], "withRule": "shield"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "skirmishers": {
+            "name": "Landless Skirmishers",
+            "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
+            "subfactions": ["heptarchy", "early_saxon kingdoms"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "skirmisher_formation"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceorl",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["javelin", "hand_weapon"],
+                    "options": [{"replaceWeapon": "javelin", "withWeapon": [
+                                "bow",
+                                "sling"
+                            ]},
+                            [{"AddRule": "buckler"}]
+                        ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "geoguth": {
+            "name": "Geoguth",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband.",
+            "subfactions": ["heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "fierce", "light_infantry"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -43,8 +100,8 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
                     "min": 5,
                     "max": 10
                 }
@@ -57,7 +114,7 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband"],
+            "rules": ["warband", "buckler", "light_infantry"],
             "keywords": [
                 "Infantry"
             ],
@@ -68,11 +125,11 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
                     "min": 5,
                     "max": 10
                 }
@@ -85,7 +142,7 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband"],
+            "rules": ["warband", "light_infantry", "buckler"],
             "keywords": [
                 "Infantry"
             ],
@@ -99,8 +156,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_infantry"}],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
                     "min": 5,
                     "max": 10
                 }
@@ -155,7 +212,7 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["shield"],
+            "rules": [],
             "keywords": [
                 "Infantry"
             ],
@@ -184,10 +241,16 @@
         }
     },
     "weapons": {},
-    "rules": {},
+    "rules": {
+        "fierce": {
+            "name": "Fierce",
+            "hidden": false,
+            "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them.",
+            "description": "During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+            "points": [-1]},
     "relics": [],
     "strategies": [{
-        "subfactions": ["merica", "wessex", "late_kent"],
+        "subfactions": ["heptarchy"],
         "name": "Shield Wall",
         "phase": "activation",
         "description": "All units with shields and spears equipped (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
@@ -200,5 +263,4 @@
         "description": "All units of thegn may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
         "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
         "cost": 1
-    }] 
-}
+    }]}}
