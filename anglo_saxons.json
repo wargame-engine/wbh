@@ -1,0 +1,112 @@
+{
+    "id": "anglo_saxons",
+    "name": "Anglo Saxons",
+    "units": {
+        "low_bordweall": {
+            "name": "Low Bordweall",
+            "description": "A band of freemen, who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceorl",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "great_bordweall": {
+            "name": "Great Bordweall",
+            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Thegn",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Geburs": {
+            "name": "Geburs",
+            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Gebur",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["javelin"],
+                    "options": [
+                        {"addRule": "shield"},
+                        {"replaceWeapon": "javelin", "withWeapon": ["spear", "bow", "sling"]}
+                    ],
+                    "notes": "Add special rules here",
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Huscarl": {
+            "name": "Huscarls",
+            "description": "Cool dudes.",
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Huscarl",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        }
+    },
+    "weapons": {},
+    "rules": {},
+    "relics": []
+}
