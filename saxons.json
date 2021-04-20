@@ -2,10 +2,10 @@
     "id": "saxons",
     "name": "Saxons",
     "subfactions": {
-        "early_saxon kingdoms": {
+        "early_saxon_kingdoms": {
             "name": "Early Saxon Kingdoms (400s-600s AD)",
             "phase": "activation",
-            "id": "early_saxon kingdoms",
+            "id": "early_saxon_kingdoms",
             "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
         }
     ,
@@ -25,13 +25,13 @@
     },
     "units": {
         "ceorl": {
-            "name": "Ceorl",
-            "description": "A band of freemen/ceorls (Pronouced Churls),",
+            "name": "Ceorl Militia",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon king, warlord, or noble.",
             "subfactions": ["heptarchy"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "buckler"],
+            "rules": ["warband", "shield", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -44,24 +44,50 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["spear"],
-                    "options": [{"replaceRule": [[{"id":"buckler"}]], "withRule": "shield"}],
+                    "options": [],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
+            "lowborn_spear_levy": {
+                "name": "Peasant Spear Levy",
+                "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Saxons were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
+                "subfactions": ["sea_raiders", "early_saxon_kingdoms"],
+                "category": "infantry",
+                "min": 1,
+                "max": 1,
+                "rules": ["warband", "shield", "if_it_bleeds"],
+                "keywords": ["Infantry"],
+                "models": [
+                    {
+                        "name": "Lowborn",
+                        "courage": 4,
+                        "movement": 6,
+                        "shoot": 5,
+                        "fight": 4,
+                        "defense": 5,
+                        "reflexes": 4,
+                        "wounds": 1,
+                        "weapons": ["spear", "javelin"],
+                        "options": [],
+                        "min": 5,
+                        "max": 10
+                    }
+                ]
+            },
         "skirmishers": {
             "name": "Landless Skirmishers",
             "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
-            "subfactions": ["heptarchy", "early_saxon kingdoms"],
+            "subfactions": ["heptarchy", "early_saxon_kingdoms"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "skirmisher_formation"],
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds", "light_footed"],
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Ceorl",
+                    "name": "Lowborn",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -81,18 +107,18 @@
                 }
             ]
         },
-        "geoguth": {
-            "name": "Geoguth",
-            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband.",
+        "light_geoguth": {
+            "name": "Light Geoguth Warriors",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
             "subfactions": ["heptarchy"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "buckler", "fierce", "light_infantry"],
+            "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds", "light_footed"],
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Ceorl",
+                    "name": "Geoguth",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -101,115 +127,204 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["hand_weapon", "javelin"],
-                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
+                    "options": [],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
-        "great_bordweall": {
-            "name": "Thegn Bordweall",
-            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
-            "subfactions": ["wessex", "late_kent"],
+        "heavy_geoguth": {
+            "name": "Geoguth Spearmen Warriors",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+            "subfactions": ["heptarchy"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "buckler", "light_infantry"],
-            "keywords": [
-                "Infantry"
-            ],
+            "rules": ["warband", "shield", "fierce", "if_it_bleeds"],
+            "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Thegn",
+                    "name": "Geoguth",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear"],
-                    "options": [{"addWeapon": "javelin"}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "Merican_thegn": {
-            "name": "Merican Thegn Bordweall",
-            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
-            "subfactions": ["merica"],
-            "category": "infantry",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "light_infantry", "buckler"],
-            "keywords": [
-                "Infantry"
-            ],
-            "models": [
-                {
-                    "name": "Thegn",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear"],
-                    "options": [{"addWeapon": "javelin"}, {"replaceRule": [[{"id": "light_infantry"}, {"id":"buckler"}]], "withRule": "shield"}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "Geburs": {
-            "name": "Geburs",
-            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",
-            "category": "infantry",
-            "min": 1,
-            "max": 1,
-            "rules": ["skirmisher_formation", "warband"],
-            "keywords": [
-                "Infantry", "Skirmisher"
-            ],
-            "models": [
-                {
-                    "name": "Gebur",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": [
-                        "javelin"
-                    ],
-                    "options": [
-                        {
-                            "addWeapon": "shield"
-                        },
-                        {
-                            "replaceWeapon": "javelin",
-                            "withWeapon": [
-                                "spear",
-                                "bow",
-                                "sling"
-                            ]
-                        }
-                    ],
-                    "notes": "Add special rules here",
-                    "rules": [],
+                    "weapons": ["spear", "javelin"],
+                    "options": [],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
-        "Huscarl": {
-            "name": "Huscarls",
-            "description": "Cool dudes.",
+        "saxon_keel": {
+            "name": "Saxon Geoguth Keel",
+            "description": "A Saxon 'Keel' is a collection of light raiders, with 'keel' being the name of the ship and the unit being the number of men to man such a ship. As expected the various 'low-life's that make up a keel, are effectively like pirates or vikings. They show up on a galley they row, they attack, they fight, and then they rob and kill people. Like many robbers or thieves, they don't appear to be that heavily equipped. A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+            "subfactions": ["sea_raiders"],
             "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "light_infantry", "buckler", "if_it_bleeds", "fierce"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Raiders",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "early_geoguth": {
+            "name": "Geoguth",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+            "subfactions": ["early_saxon_kingdoms"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Geoguth",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "duguth_raiders": {
+            "name": "Duguth Keel",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["sea_raiders"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "light_infantry", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "duguth_kingdoms": {
+            "name": "Duguth",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["early_saxon_kingdoms"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "light_infantry", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Duguth_Bordweall": {
+            "name": "Duguth Spearmen Bordweall",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "shield", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Duguth_Light": {
+            "name": "Light Duguth Warriors",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "light_infantry", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "heavy_hearthguard": {
+            "name": "Heavy Hearthguard",
+            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "category": "infantry",
+            "subfactions": ["sea_raiders", "early_saxon_kingdoms"],
             "min": 1,
             "max": 1,
             "rules": [],
@@ -218,36 +333,90 @@
             ],
             "models": [
                 {
-                    "name": "Huscarl",
+                    "name": "Gedribt",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [
-                        "spear", "shield"
+                    "weapons": ["hand_weapon", "shield"
                     ],
-                    "options": [
-                        {"addWeapon": "javelin"},
-                        {"replaceWeapon": "spear",
-                            "withWeapon": ["two_handed_axe"]}
-                    ],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "light_hearthguard": {
+            "name": "Light Hearthguard",
+            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["buckler", "light_infantry"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Gedribt",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 10
                 }
             ]
         }
     },
+    "late_heavy_hearthguard": {
+        "name": "Heavy Hearthguard",
+        "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+        "category": "infantry",
+        "subfactions": ["heptarchy"],
+        "min": 1,
+        "max": 1,
+        "rules": [],
+        "keywords": [
+            "Infantry"
+        ],
+        "models": [
+            {
+                "name": "Gedribt",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 7,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "shield"
+                ],
+                "options": [{"addWeapon": "javelin"}, 
+                    [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}]
+                ],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
     "weapons": {},
     "rules": {
         "fierce": {
             "name": "Fierce",
             "hidden": false,
-            "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them.",
-            "description": "During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
-            "points": [-1]},
+            "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+            "points": [-1]}},
     "relics": [],
     "strategies": [{
         "subfactions": ["heptarchy"],
@@ -257,10 +426,10 @@
         "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
         "cost": 1
     },{
-        "subfactions": ["wessex"],
+        "subfactions": ["heptarchy", "sea_raiders"],
         "name": "Veterans",
         "phase": "activation",
-        "description": "All units of thegn may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
         "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
         "cost": 1
-    }]}}
+    }]}
