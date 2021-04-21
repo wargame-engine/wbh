@@ -53,7 +53,7 @@
             "lowborn_spear_levy": {
                 "name": "Peasant Spear Levy",
                 "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Saxons were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
-                "subfactions": ["sea_raiders", "early_saxon_kingdoms"],
+                "subfactions": ["sea_raiders", "early_saxon_kingdoms", "none"],
                 "category": "infantry",
                 "min": 1,
                 "max": 1,
@@ -79,17 +79,17 @@
         "skirmishers": {
             "name": "Landless Skirmishers",
             "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
-            "subfactions": ["heptarchy", "early_saxon_kingdoms"],
+            "subfactions": ["heptarchy", "early_saxon_kingdoms", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "skirmisher_formation", "if_it_bleeds", "light_footed"],
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Lowborn",
                     "courage": 5,
-                    "movement": 6,
+                    "movement": 7,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 5,
@@ -114,13 +114,13 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds", "light_footed"],
+            "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Geoguth",
                     "courage": 5,
-                    "movement": 6,
+                    "movement": 7,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
@@ -307,7 +307,7 @@
                 {
                     "name": "Duguth",
                     "courage": 5,
-                    "movement": 5,
+                    "movement": 7,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
@@ -324,7 +324,7 @@
             "name": "Heavy Hearthguard",
             "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
             "category": "infantry",
-            "subfactions": ["sea_raiders", "early_saxon_kingdoms"],
+            "subfactions": ["sea_raiders", "early_saxon_kingdoms", "none"],
             "min": 1,
             "max": 1,
             "rules": [],
@@ -396,7 +396,7 @@
                 {
                     "name": "Gedribt",
                     "courage": 6,
-                    "movement": 6,
+                    "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
@@ -465,6 +465,6 @@
         "name": "Veterans",
         "phase": "activation",
         "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
-        "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
+        "flavor": "Many years of campaigning have given the late Saxon kingdoms or the early raiders a pool of hardened veterans.",
         "cost": 1
     }]}
