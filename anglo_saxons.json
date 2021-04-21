@@ -1,14 +1,44 @@
 {
     "id": "anglo_saxons",
     "name": "Anglo Saxons",
+    "subfactions": {
+        "merica": {
+            "name": "Merica (700-1066)",
+            "phase": "activation",
+            "id": "merica",
+            "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
+        }
+    ,
+        "wessex": {
+            "name": "Wessex (700-1066)",
+            "phase": "activation",
+            "id": "wessex",
+            "background": "From the 800s to late 1000s, with the arrival of the Normons, this was the dominant kingdom. Wessex had such power, that after 900, kingdoms like Kent and Sussex were simply 'Greater Wessex'."
+        }
+    ,
+        "late_kent": {
+            "name": "Kent (793-1066)",
+            "phase": "activation",
+            "id": "late_kent",
+            "background": "Late Kent was a weaker, less accomplished, but proud kingdom."
+        }
+        ,
+        "anglian_kingdoms_heptarchy": {
+            "name": "Anglian Kingdoms Heptarchy (600-700 AD)",
+            "phase": "activation",
+            "id": "anglian_kingdoms_heptarchy",
+            "background": "The Angles/Anglos had their own kingdoms that were considered part of the 'Heptarchy', specifically East Anglia, Merica, Bernicia, and Deira. Eventually they would be united and/or conquered by the 'Saxon' kingdom of Wessex."
+        }
+    },
     "units": {
         "low_bordweall": {
-            "name": "Low Bordweall",
-            "description": "A band of freemen, who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "name": "Ceorl Bordweall",
+            "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "subfactions": ["merica", "wessex", "late_kent"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": [],
+            "rules": ["warband", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -17,23 +47,27 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 6,
+                    "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear"],
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
         "great_bordweall": {
-            "name": "Great Bordweall",
+            "name": "Thegn Bordweall",
             "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "subfactions": ["wessex", "late_kent"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": [],
-            "keywords": ["Infantry"],
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Thegn",
@@ -41,10 +75,39 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 7,
+                    "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear"],
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Merican_thegn": {
+            "name": "Merican Thegn Bordweall",
+            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "subfactions": ["merica"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Thegn",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_infantry"}],
                     "min": 5,
                     "max": 10
                 }
@@ -56,8 +119,10 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": [],
-            "keywords": ["Infantry"],
+            "rules": ["skirmisher_formation", "warband", "if_it_bleeds", "light_footed"],
+            "keywords": [
+                "Infantry", "Skirmisher"
+            ],
             "models": [
                 {
                     "name": "Gebur",
@@ -65,13 +130,24 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 4,
-                    "defense": 6,
-                    "reflexes": 6,
+                    "defense": 5,
+                    "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["javelin"],
+                    "weapons": [
+                        "javelin"
+                    ],
                     "options": [
-                        {"addRule": "shield"},
-                        {"replaceWeapon": "javelin", "withWeapon": ["spear", "bow", "sling"]}
+                        {
+                            "addWeapon": "shield"
+                        },
+                        {
+                            "replaceWeapon": "javelin",
+                            "withWeapon": [
+                                "spear",
+                                "bow",
+                                "sling"
+                            ]
+                        }
                     ],
                     "notes": "Add special rules here",
                     "rules": [],
@@ -86,8 +162,10 @@
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": [],
-            "keywords": ["Infantry"],
+            "rules": ["shield"],
+            "keywords": [
+                "Infantry"
+            ],
             "models": [
                 {
                     "name": "Huscarl",
@@ -95,7 +173,41 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 8,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": [
+                        "spear", "shield"
+                    ],
+                    "options": [
+                        {"addWeapon": "javelin"},
+                        {"replaceWeapon": "spear",
+                            "withWeapon": ["two_handed_axe"]}
+                    ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Duguth_Bordweall": {
+            "name": "Duguth Spearmen Bordweall",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "shield", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear"],
@@ -104,9 +216,129 @@
                     "max": 10
                 }
             ]
-        }
-    },
+        },
+        "Duguth_Light": {
+            "name": "Light Duguth Warriors",
+            "description": "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "light_infantry", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Duguth",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "light_geoguth": {
+            "name": "Light Geoguth Warriors",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 3,
+            "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds", "light_footed"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Geoguth",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "heavy_geoguth": {
+            "name": "Geoguth Spearmen Warriors",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 3,
+            "rules": ["warband", "shield", "fierce", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Geoguth",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "javelin"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "ceorl": {
+            "name": "Ceorl Militia",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "category": "infantry",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "shield", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceorl",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        }},
     "weapons": {},
     "rules": {},
-    "relics": []
+    "relics": [],
+    "strategies": [{
+        "subfactions": ["merica", "wessex", "late_kent", "anglian_kingdoms_heptarchy"],
+        "name": "Shield Wall",
+        "phase": "activation",
+        "description": "All units with shields and spears equipped (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
+        "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
+        "cost": 1
+    },{
+        "subfactions": ["wessex"],
+        "name": "Veterans",
+        "phase": "activation",
+        "description": "All units of thegn may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
+        "cost": 1
+    }] 
 }
