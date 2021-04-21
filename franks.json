@@ -34,7 +34,7 @@
         "frank_heerbann": {
             "name": "Frankish Heerbann",
             "description": "The Frankish 'Heerbann' (Master Demand/Call/Speak) was a call from the king or a duke for military service. Those obligated to answer the call were the freemen and various higher classes, but the term usually refers to large groups of freemen assembled for a military campaign. The freemen were given months to organize themselves, get their equipment, and train for the coming campaign. There were harsh punishments for not answering the call, but the costs of equipment and the months not spent managing the farm or estates could be very expensive. This system was in place till the first crusade, being in place for both the Franks and Holy Roman Empire. ",
-            "subfactions": ["migration_period_franks", "early_merovingian_franks"],
+            "subfactions": ["migration_period_franks", "early_merovingian_franks", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -200,11 +200,11 @@
         "skirmishers": {
             "name": "Landless Skirmishers",
             "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
-            "subfactions": ["migration_period_franks", "early_merovingian_franks","later_merovingian_franks"],
+            "subfactions": ["migration_period_franks", "early_merovingian_franks","later_merovingian_franks", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "skirmisher_formation", "if_it_bleeds", "light_footed"],
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -287,7 +287,7 @@
         "franci": {
             "name": "Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources, while the 'Frankish Heerbann' unit represents the poorer franci.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
+            "subfactions": ["early_merovingian_franks","later_merovingian_franks", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -317,7 +317,7 @@
         "light_tribal_warriors": {
             "name": "Light Tribal Warriors",
             "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated into 'Franks'.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
+            "subfactions": ["early_merovingian_franks","later_merovingian_franks", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -342,7 +342,7 @@
         "tribal_warriors": {
             "name": "Tribal Warriors",
             "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated into 'Franks'.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
+            "subfactions": ["early_merovingian_franks","later_merovingian_franks", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -426,7 +426,7 @@
             "name": "Pueri Trustis",
             "description": "Pueri ('Boys') Trustis, were the personal guards and retinue of powerful nobles such as lords or even the king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures.",
             "category": "infantry",
-            "subfactions": ["early_merovingian_franks","migration_period_franks"],
+            "subfactions": ["early_merovingian_franks","migration_period_franks", "none"],
             "min": 1,
             "max": 1,
             "rules": ["fierce"],
@@ -619,17 +619,10 @@
             "points": [-1]}},
     "relics": [],
     "strategies": [{
-        "subfactions": ["heptarchy"],
-        "name": "Shield Wall",
-        "phase": "activation",
-        "description": "All units with shields and spears equipped (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
-        "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
-        "cost": 1
-    },{
-        "subfactions": ["heptarchy", "sea_raiders"],
+        "subfactions": ["sea_raiders"],
         "name": "Veterans",
         "phase": "activation",
         "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
-        "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
+        "flavor": "Many years of campaigning have given the Franks a pool of hardened veterans.",
         "cost": 1
     }]}
