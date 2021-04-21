@@ -80,7 +80,9 @@
                     "wounds": 1,
                     "weapons": ["spear", "shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "stubborn"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                     "min": 5,
                     "max": 10
                 }
@@ -133,7 +135,9 @@
                         "wounds": 1,
                         "weapons": ["spear", "hand_weapon"],
                         "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"},
-                            {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                            {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}
+                            ],
                         "min": 5,
                         "max": 10
                     }
@@ -160,7 +164,8 @@
                         "wounds": 1,
                         "weapons": ["spear", "hand_weapon"],
                         "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"}, {"addRule": "light_armor"},
-                            {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                            {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}],
                         "min": 5,
                         "max": 10
                     }
@@ -302,7 +307,8 @@
                     "wounds": 1,
                     "weapons": ["spear", "shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]}],
                     "min": 5,
                     "max": 10
                 }
@@ -438,7 +444,10 @@
                     "weapons": ["sword", "shield", "javelin"
                     ],
                     "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]}],
+                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -467,7 +476,9 @@
                     ],
                     "options": [{"addRule": "war_horse"},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]}
+                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
                     ],
                     "min": 5,
                     "max": 10
@@ -498,7 +509,9 @@
                     "options": [{"addRule": "war_horse"},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
-                        {"replaceWeapon": "javelin", "withWeapon": ["spear"]}],
+                        {"replaceWeapon": "javelin", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                     "min": 5,
                     "max": 10
                 }
@@ -528,7 +541,9 @@
                 "weapons": ["sword", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                             {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
-                            {"replaceWeapon": "javelin", "withWeapon": "spear"}],
+                            {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                            {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                            {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                 "min": 5,
                 "max": 10
             }
@@ -557,8 +572,8 @@
                 ],
                 "options": [{"addRule": "war_horse"},
                     {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
-                    {"replaceWeapon": "shield", "withWeapon": ["bow"]}
-                ],
+                    {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                    {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
                 "min": 5,
                 "max": 10
             }

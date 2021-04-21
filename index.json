@@ -30,6 +30,7 @@
         "unarmed": {"name": "Unarmed", "attacks": 1, "short": "Melee"},
         "hand_weapon": {"name": "Hand Weapon", "attacks": 1, "short": "Melee", "ap": 1},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
+        "spartha": {"name": "Spartha", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 1}]},
         "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 2}]},
         "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 4}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
@@ -42,6 +43,7 @@
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
         "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2},
+        "hand_axe": {"name": "One Handed Axe", "attacks": 1, "short": "Melee", "ap": 2},
         "two_handed_axe": {"name": "Two Handed Axe", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2},
         "shield": {"name" : "Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}]}
         },
@@ -109,8 +111,13 @@
                                 "name": "Furious Charge",
                                 "hidden": false,
                                 "description_short": "Charge and win, enemy unit breaks",
-                                "description": "If this unit charges another and 'wins' the first round of combat, the other unit has to break (Act like it failed a break test). If the other unit has 'stubborn' rule a d6, on a 1,2,or 3 the other unit breaks.", 
+                                "description": "(Requires War Horse) If this unit charges another and 'wins' the first round of combat, the other unit has to break (Act like it failed a break test). If the other unit has 'stubborn' rule a d6, on a 1,2,or 3 the other unit breaks.", 
                                 "flavor": "The fury of heavy cavalry was terrifying to those not prepared for the loud pounding of hooves and for the sheer weight of the charge.",
-                                "points": [3]}
+                                "points": [3]},
+        "war_horse" : {
+                                      "name" : "War Horse",
+                                      "description" : "Increase Movement by 2\".",
+                                      "points" : 2
+                                    }
         }
     }

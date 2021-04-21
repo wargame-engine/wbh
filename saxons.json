@@ -6,11 +6,11 @@
             "name": "Early Saxon Kingdoms (400s-600s AD)",
             "phase": "activation",
             "id": "early_saxon_kingdoms",
-            "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
+            "background": "Kent, Wessex, Sussex, Essex."
         }
     ,
         "sea_raiders": {
-            "name": "Sea Raiders",
+            "name": "Sea Raiders (250-400 AD)",
             "phase": "activation",
             "id": "sea_raiders",
             "background": "Barbarian Invasion"
@@ -26,7 +26,7 @@
     "units": {
         "ceorl": {
             "name": "Ceorl Militia",
-            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon king, warlord, or noble.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
             "subfactions": ["heptarchy"],
             "category": "infantry",
             "min": 1,
@@ -165,7 +165,7 @@
             "subfactions": ["sea_raiders"],
             "category": "infantry",
             "min": 1,
-            "max": 1,
+            "max": 3,
             "rules": ["warband", "light_infantry", "buckler", "if_it_bleeds", "fierce"],
             "keywords": [
                 "Infantry"
@@ -193,7 +193,7 @@
             "subfactions": ["early_saxon_kingdoms"],
             "category": "infantry",
             "min": 1,
-            "max": 1,
+            "max": 3,
             "rules": ["warband", "buckler", "fierce", "light_infantry", "if_it_bleeds"],
             "keywords": ["Infantry"],
             "models": [
@@ -343,7 +343,40 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon", "shield"
                     ],
-                    "options": [{"addWeapon": "javelin"}],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "early_heavy_hearthguard": {
+            "name": "Heavy Hearthguard",
+            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "category": "infantry",
+            "subfactions": ["sea_raiders"],
+            "min": 1,
+            "max": 2,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Gedribt",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "shield"
+                    ],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
                     "min": 5,
                     "max": 10
                 }
@@ -401,7 +434,9 @@
                 "weapons": ["hand_weapon", "shield"
                 ],
                 "options": [{"addWeapon": "javelin"}, 
-                    [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}]
+                    [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}]
                 ],
                 "min": 5,
                 "max": 10
