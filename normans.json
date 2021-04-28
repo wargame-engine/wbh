@@ -7,6 +7,12 @@
             "phase": "activation",
             "id": "duchy_of_normany",
             "background": ""
+        },
+        "italo_normans": {
+            "name": "Italo-Normans (1000-1065 AD)",
+            "phase": "activation",
+            "id": "italo_normans",
+            "background": ""
         }},
     "units": {
         "frank_heerbann": {
@@ -34,37 +40,11 @@
                     "max": 10
                 }
             ]
-        },
-            "lowborn_spear_levy": {
-                "name": "Peasant Spear Levy",
-                "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Franks were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
-                "subfactions": ["sea_raiders"],
-                "category": "infantry",
-                "min": 1,
-                "max": 1,
-                "rules": ["warband", "shield", "if_it_bleeds"],
-                "keywords": ["Infantry"],
-                "models": [
-                    {
-                        "name": "Lowborn",
-                        "courage": 4,
-                        "movement": 6,
-                        "shoot": 5,
-                        "fight": 4,
-                        "defense": 5,
-                        "reflexes": 4,
-                        "wounds": 1,
-                        "weapons": ["spear", "javelin"],
-                        "options": [],
-                        "min": 5,
-                        "max": 10
-                    }
-                ]
             },
         "skirmishers": {
             "name": "Landless Skirmishers",
             "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
-            "subfactions": ["duchy_of_normany"],
+            "subfactions": ["duchy_of_normany","italo_normans", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -95,7 +75,7 @@
         "coloni_skirm": {
             "name": "Coloni Skirmishers",
             "description": "A band of the impoverished and landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. These 'Coloni' were fond of the bow, but generally used any ranged weapon that would prevent them from having to fight in melee. This was a common fate of people called to service, but incredibly poor, extending all the way back to the Republican Romans.",
-            "subfactions": ["carolingian_french"],
+            "subfactions": ["duchy_of_normany","italo_normans", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -124,7 +104,7 @@
         "coloni_archers": {
             "name": "Coloni Archers",
             "description": "A band of the impoverished and landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. These 'Coloni' were fond of the bow, but generally used any ranged weapon that would prevent them from having to fight in melee. This was a common fate of people called to service, but incredibly poor, extending all the way back to the Republican Romans.",
-            "subfactions": ["duchy_of_normany"],
+            "subfactions": ["duchy_of_normany","italo_normans", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -148,89 +128,10 @@
                 }
             ]
         },
-        "franci": {
-            "name": "Franci",
-            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources, while the 'Frankish Heerbann' unit represents the poorer franci.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
-            "category": "infantry",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds"],
-            "keywords": [
-                "Infantry"
-            ],
-            "models": [
-                {
-                    "name": "Franci",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "light_tribal_warriors": {
-            "name": "Light Tribal Warriors",
-            "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated into 'Franks'.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
-            "category": "infantry",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "buckler", "light_infantry", "if_it_bleeds"],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Duguth",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["hand_weapon", "javelin"],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "tribal_warriors": {
-            "name": "Tribal Warriors",
-            "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated into 'Franks'.",
-            "subfactions": ["early_merovingian_franks","later_merovingian_franks"],
-            "category": "infantry",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "shield", "if_it_bleeds"],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Duguth",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["hand_weapon", "javelin"],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
         "liberi": {
             "name": "Liberi",
             "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
-            "subfactions": ["duchy_of_normany"],
+            "subfactions": ["duchy_of_normany", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -256,10 +157,68 @@
                 }
             ]
         },
+        "in_liberi": {
+            "name": "Italo-Norman Liberi Militia",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "subfactions": ["italo_normans"],
+            "category": "infantry",
+            "min": 1,
+            "max": 2,
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "norman_spearmen": {
             "name": "Norman Spear Mercenaries",
             "description": "The Normans were known to have personal mercenaries, possibly Italian, Nordic, Norman, Flemish or French. During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
-            "subfactions": ["duchy_of_normany"],
+            "subfactions": ["duchy_of_normany", "none"],
+            "category": "infantry",
+            "min": 1,
+            "max": 2,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Serjeants",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"], 
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "italio_norman_spearmen": {
+            "name": "Norman Spear Mercenaries",
+            "description": "The Normans were known to have personal mercenaries, possibly Italian, Nordic, Norman, Flemish or French. During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
+            "subfactions": ["italo_normans"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -288,7 +247,7 @@
         "liberi_skirmishers": {
             "name": "Liberi Skirmishers",
             "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
-            "subfactions": ["duchy_of_normany"],
+            "subfactions": ["duchy_of_normany","italo_normans", "none"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -316,7 +275,7 @@
         },
     "knights": {
         "name": "Knights",
-        "description": "Having evolved from the milites (Previously a Roman term for 'soldier) the professional soldier class, who often fought on horseback, the 'knight' was an increasingly professonalizing clas of soldier. Slowly bit by bit this professional class of warrior, became closer to a high class noble then a well off freeman or middle class landowner. The normans were the 'spearpoint', pun intended of this new evolution, as their calvary turned away from the throwing spear and sword, and towards the lance and stabbing spear.",
+        "description": "Having evolved from the milites (Previously a Roman term for 'soldier) the professional soldier class, who often fought on horseback, the 'knight' was an increasingly professonalizing clas of soldier. Slowly bit by bit this professional class of warrior, became closer to a high class noble then a well off freeman or middle class landowner. The normans were the 'spearpoint', pun intended of this new evolution, as their calvary turned away from the throwing spear and sword, and towards the lance and stabbing spear. Despite these slow and study changes, for many decades the average 'knight' or 'milites' was a veteran mercenary or soldier, who had accumulated wealth and experience over time.",
         "subfactions": ["duchy_of_normany"],
         "category": "infantry",
         "min": 1,
@@ -335,7 +294,7 @@
                 "defense": 5,
                 "reflexes": 5,
                 "wounds": 1,
-                "weapons": ["sword", "shield", "javelin"],
+                "weapons": ["spartha", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
                             {"replaceWeapon": "javelin", "withWeapon": "lance"}],
@@ -355,10 +314,18 @@
             "points": [-1]}},
     "relics": [],
     "strategies": [{
-        "subfactions": ["duchy_of_normany"],
+        "subfactions": ["duchy_of_normany","italo_normans"],
         "name": "Veterans",
         "phase": "activation",
-        "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
-        "flavor": "Many years of campaigning have given Wessex a pool of hardened veterans.",
+        "description": "All units of knights or spearmen may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "flavor": "Many years of campaigning have given the Normans a pool of hardened veterans.",
+        "cost": 1
+    },
+    {
+        "subfactions": ["italo_normans"],
+        "name": "Shield Wall",
+        "phase": "activation",
+        "description": "All units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if targeted by an attackit gets +1 Save.. This effect remains in place till the unit moves.",
+        "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
         "cost": 1
     }]}
