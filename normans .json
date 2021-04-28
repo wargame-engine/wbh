@@ -275,7 +275,7 @@
         },
     "knights": {
         "name": "Knights",
-        "description": "Having evolved from the milites (Previously a Roman term for 'soldier) the professional soldier class, who often fought on horseback, the 'knight' was an increasingly professonalizing clas of soldier. Slowly bit by bit this professional class of warrior, became closer to a high class noble then a well off freeman or middle class landowner. The normans were the 'spearpoint', pun intended of this new evolution, as their calvary turned away from the throwing spear and sword, and towards the lance and stabbing spear.",
+        "description": "Having evolved from the milites (Previously a Roman term for 'soldier) the professional soldier class, who often fought on horseback, the 'knight' was an increasingly professonalizing clas of soldier. Slowly bit by bit this professional class of warrior, became closer to a high class noble then a well off freeman or middle class landowner. The normans were the 'spearpoint', pun intended of this new evolution, as their calvary turned away from the throwing spear and sword, and towards the lance and stabbing spear. Despite these slow and study changes, for many decades the average 'knight' or 'milites' was a veteran mercenary or soldier, who had accumulated wealth and experience over time.",
         "subfactions": ["duchy_of_normany"],
         "category": "infantry",
         "min": 1,
@@ -294,7 +294,7 @@
                 "defense": 5,
                 "reflexes": 5,
                 "wounds": 1,
-                "weapons": ["sword", "shield", "javelin"],
+                "weapons": ["spartha", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
                             {"replaceWeapon": "javelin", "withWeapon": "lance"}],
@@ -325,7 +325,7 @@
         "subfactions": ["italo_normans"],
         "name": "Shield Wall",
         "phase": "activation",
-        "description": "All units of 'Italo-Norman Liberi Militia' (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
+        "description": "All units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if targeted by an attackit gets +1 Save.. This effect remains in place till the unit moves.",
         "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
         "cost": 1
     }]}

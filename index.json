@@ -34,19 +34,20 @@
         "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 2}]},
         "pike": { "name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 4}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
-        "javelin": {"name": "Javelins", "attacks": 1, "short": 12, "ap": 1},
-        "heavy_throwing_spear": {"name": "Heavy Throwing Spears", "attacks": 1, "short": 12, "ap": 2},
+        "javelin": {"name": "Javelins", "attacks": 1, "short": 12, "ap": 1, "rules": ["assault"]},
+        "heavy_throwing_spear": {"name": "Heavy Throwing Spears", "attacks": 1, "short": 12, "ap": 2, "rules": ["assault"]},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "sling_volley"}]},
         "trained_sling": {"name": "Trained Sling", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "sling_volley"}]},
         "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
-        "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "rending"}]},
+        "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "rending"}]},
         "hand_axe": {"name": "One Handed Axe", "attacks": 1, "short": "Melee", "ap": 2},
-        "two_handed_axe": {"name": "Two Handed Axe", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "rending"}]},
-        "shield": {"name" : "Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}]}
-        },
+        "two_handed_axe": {"name": "Two Handed Axe", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "rending"}]},
+        "shield": {"name" : "Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}]},
+        "spear_and_shield": {"name" : "Spear and Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}, {"id": "reach", "x": 2}]}
+    },
     "rules": {
         "shield": {
             "name": "Shield",
@@ -119,6 +120,24 @@
                                       "name" : "War Horse",
                                       "description" : "Increase Movement by 2\".",
                                       "points" : 2
-                                    }
-        }
+                                    },
+        "lead_by_example" : {
+                                        "name" : "Lead By Example",
+                                        "description" : "This unit can be merged with any other unit, will be harmed after that unit is.",
+                                        "points" : 5
+                                    
+        },
+        "army_general" : {
+            "name" : "Army General",
+            "description" : "Friendly units within 12' of this unit do not experience 'Warband'.",
+            "points" : 5
+        
+},
+"field_orders": {
+    "name": "Field Orders",
+    "inputs": ["x"],
+    "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* Re-roll Strength rolls of 9+ \n* +3\" Movement \n\nA unit may only benefit from one Field Order.",
+    "points": [15, {"multiply": "rule.x"}]
+}
+    }
     }

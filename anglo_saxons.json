@@ -176,12 +176,11 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [
-                        "spear", "shield"
+                    "weapons": ["spear_and_shield"
                     ],
                     "options": [
                         {"addWeapon": "javelin"},
-                        {"replaceWeapon": "spear",
+                        {"replaceWeapon": "spear_and_shield",
                             "withWeapon": ["two_handed_axe"]}
                     ],
                     "min": 5,
@@ -322,7 +321,64 @@
                     "max": 10
                 }
             ]
-        }},
+        },
+        "earl": {
+            "name": "Eorl",
+            "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
+            "category": "command",
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Eorl",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 8,
+                    "wounds": 2,
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addRule": "war_horse"},
+                        {"replaceWeapon": "spear_and_shield", 
+                            "withWeapon": ["two_handed_axe"]}
+                        ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ealdorman": {
+            "name": "Ealdorman",
+            "description": "Below the Eorls were the Ealdormen, who were the appointed rulers of 'shires' and/or members of previously defeated royal families. As such, not every Ealdorman was equal, with the previous leaders of kingdoms having remained part of their power, just with a new King ruling over them.",
+            "category": "command",
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ealdorman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addRule": "war_horse"},
+                        {"replaceWeapon": "spear_and_shield", 
+                            "withWeapon": ["two_handed_axe"]}
+                        ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
     "weapons": {},
     "rules": {},
     "relics": [],
@@ -330,7 +386,7 @@
         "subfactions": ["merica", "wessex", "late_kent", "anglian_kingdoms_heptarchy"],
         "name": "Shield Wall",
         "phase": "activation",
-        "description": "All units with shields and spears equipped (light infantry not included), who haven't moved this turn, get +1 armor if they are charged or fired upon. This effect remains in place till the unit moves.",
+        "description": "All units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if charged or targeted by a shooting attack it gets +1 Save. This effect remains in place till the unit moves.",
         "flavor": "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
         "cost": 1
     },{
@@ -338,6 +394,13 @@
         "name": "Veterans",
         "phase": "activation",
         "description": "All units of thegn may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "flavor": "Many years of campaigning have given Wessex or the Anglian kingdoms a pool of hardened veterans.",
+        "cost": 1
+    },{
+        "subfactions": ["merica", "wessex", "late_kent"],
+        "name": "Combined Units",
+        "phase": "activation",
+        "description": "Any unitwith 'Thegn' in the title can be 'merged' with any unit that has 'Ceorl' in its name. ",
         "flavor": "Many years of campaigning have given Wessex or the Anglian kingdoms a pool of hardened veterans.",
         "cost": 1
     }] 
