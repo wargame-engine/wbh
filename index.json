@@ -3,8 +3,9 @@
         "romans": {"name": "Romans", "id": "romans", "url": "romans.json", "color": "#9f0807"},
         "anglo_saxons": {"name": "Anglo Saxons", "id": "anglo_saxons", "url": "anglo_saxons.json", "color": "#436497"},
         "saxons": {"name": "Saxons", "id": "saxons", "url": "saxons.json", "color": "#594228"},
-        "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#6372AA"},
-        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA"}
+        "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#00205B"},
+        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#087194"},
+        "norse": {"name": "Norse", "id": "norse", "url": "norse.json", "color": "#50A584"}
     },
     "alliances": {},
     "categories": {
