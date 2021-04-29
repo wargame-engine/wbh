@@ -1,25 +1,44 @@
 {
     "factions": {
         "romans": {"name": "Romans", "id": "romans", "url": "romans.json", "color": "#9f0807"},
-        "anglo_saxons": {"name": "Anglo Saxons", "id": "anglo_saxons", "url": "anglo_saxons.json", "color": "#436497"},
+        "anglo_saxons": {"name": "Anglo Saxons", "id": "anglo_saxons", "url": "anglo_saxons.json", "color": "#436497"
+        ,"alliance": "north_sea"},
         "saxons": {"name": "Saxons", "id": "saxons", "url": "saxons.json", "color": "#594228"},
         "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#6372AA"},
-        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA"}
+        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA"
+            ,"alliance": "north_sea"},
+        "norse": {"name": "Norse", "id": "norse", "url": "norse.json", "color": "#6372AA",
+    "secondary_color": "9f0807"
+    ,
+    "alliance": "north_sea",
+    "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"}
     },
-    "alliances": {},
+    "alliances": {"north_sea": {"name": "Danelaw/North Sea Empire"}}},
+    "unfinished_factions": {
+        "poles": {"name": "Poles", "id": "poles", "url": "poles.json", "color": "#D83658", "alliance": "north_sea"}
+    },
     "categories": {
         "command": {"name": "Command"},
         "cavalry": {"name": "Cavalry"},
         "infantry": {"name": "Infantry"},
-        "large": {"name": "Large"}
+        "large": {"name": "Large"},
+        "core": {"name": "Core"},
+        "rare": {"name": "Rare"},
+        "elite": {"name": "Elite"}
     },
     "organizations": {
-        "skirmish": {
-            "name": "Battle (Core)",
-            "cost": 2,
-            "description": "A well-rounded force for taking on any mission.",
-            "categories": {"command": {"max": 2}, "core": {"min": 2, "max": 4}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
+        "standard_army": {
+            "name": "Standard Army (Core)",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any opponent.",
+            "categories": {
+                "command": {"min": 1, "max": 2},
+                "core": {"min": 4, "max": 8},
+                "rare": {"max": 3},
+                "elite": {"max": 2 },
+                "allies": {"max": 2 }
         }
+    }
     },
     "relics": [],
     "powers": {},
