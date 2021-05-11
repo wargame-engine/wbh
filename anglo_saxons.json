@@ -33,7 +33,7 @@
     "units": {
         "low_bordweall": {
             "name": "Ceorl Bordweall",
-            "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
             "subfactions": ["merica", "wessex", "late_kent", "none"],
             "category": "core",
             "min": 1,
@@ -59,7 +59,7 @@
         },
         "great_bordweall": {
             "name": "Thegn Bordweall",
-            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
+            "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
             "subfactions": ["wessex", "late_kent", "none"],
             "category": "core",
             "min": 1,
@@ -79,7 +79,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "options": [{"addWeapon": "javelin"}, {"AddRule": "light_armor"}],
                     "min": 5,
                     "max": 10
                 }
@@ -87,8 +87,7 @@
         },
         "Merican_thegn": {
             "name": "Merican Thegn Bordweall",
-            "description": "Minor noblemen, 'wealthy peasants', and what appears to be those of the middle class, made up a class of 'retainers' who served the king and his nobles.",
-            "subfactions": ["merica"],
+            "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
             "category": "core",
             "min": 1,
             "max": 1,
@@ -107,7 +106,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_infantry"}],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_infantry"}, {"AddRule": "light_armor"}],
                     "min": 5,
                     "max": 10
                 }
@@ -115,7 +114,7 @@
         },
         "Geburs": {
             "name": "Geburs",
-            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",
+            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
             "category": "rare",
             "min": 1,
             "max": 1,
@@ -158,7 +157,7 @@
         },
         "Huscarl": {
             "name": "Huscarls",
-            "description": "Cool dudes.",
+            "description": "A 'housecarl' (Old Norse húskarl, Old English huscarl, translates to 'house man'), was a type of 'retainer' and loyal fighting man, much like many of the minor nobility. What made the Huscarl special, was how it was a mixture of the cultural tradition of the Saxon gedribt 'hearthguard' and the Norse 'hindmen'.",
             "category": "elite",
             "min": 1,
             "max": 2,
@@ -290,7 +289,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["spear", "javelin"],
-                    "options": [],
+                    "options": [{"AddRule": "light_armor"}],
                     "min": 5,
                     "max": 10
                 }
@@ -298,7 +297,7 @@
         },
         "ceorl": {
             "name": "Ceorl Militia",
-            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
             "subfactions": ["anglian_kingdoms_heptarchy", "none"],
             "category": "core",
             "min": 1,
@@ -377,7 +376,79 @@
                     "max": 1
                 }
             ]
-        }
+        },
+        "brythonic_skirmishers": {
+            "name": "Brythonic Skirmishers",
+            "description": "'Brythonic' refers to people who spoke a 'celtic language', mainly the 'Britons' who lived in Brittany, the Welish, and the Britons who once ruled the lands that would become England. Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",
+            "category": "rare",
+            "subfactions": ["anglian_kingdoms_heptarchy", "merica"],
+            "min": 1,
+            "max": 1,
+            "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry", "Skirmisher"
+            ],
+            "models": [
+                {
+                    "name": "Brythonic Skirmisher",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": [
+                        "javelin", "hand_weapon"
+                    ],
+                    "options": [
+                        {
+                            "addWeapon": "shield"
+                        },
+                        {
+                            "replaceWeapon": "javelin",
+                            "withWeapon": [
+                                "spear",
+                                "bow",
+                                "sling"
+                            ]
+                        }
+                    ],
+                    "notes": "Add special rules here",
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "modest_bordweall": {
+            "name": "Geneat Bordweall",
+            "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. A ceorl (freeman) who ended up with enough land to become 'peasant aristocracy' or 'middle class', was a Geneat (They're still a ceorl, and not nobility). Geneats were odd, in that sometimes they were freemen saving up to have enough land to be Thegns (Who are actual minor nobility), and other times they were even richer, but uninterested in being professional soldiers.",
+            "subfactions": ["wessex", "late_kent", "merica", "none"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Geneat",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield"],
+                    "options": [{"addWeapon": "javelin"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        }    
     },
     "weapons": {},
     "rules": {},

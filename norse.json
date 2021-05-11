@@ -26,7 +26,7 @@
     "units": {
         "ceorl": {
             "name": "Ceorl Militia",
-            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. In exchange for their lands and their freedom, these people serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
             "subfactions": ["norse"],
             "category": "rare",
             "min": 1,
@@ -104,7 +104,7 @@
         "bondi": {
             "name": "Bondi Leidang militia",
             "description": "Like many other lands, the Norse had a pool of freemen that they would call up for military service if the need was requrired. Technically there was many men required to serve as Bondi within the 'leidang', but calling them all up for service would leave the land fallow, the rocks unmined, and the timber uncut. As such few of the bondi were called up at any time. The bondi, not being professional warriors, liked to guard the flanks and rear of armies, while also providing plenty of archer support.",
-            "subfactions": ["norse", "harald_hardråde"],
+            "subfactions": ["norse", "harald_hardråde", "north_sea_empire"],
             "category": "core",
             "min": 1,
             "max": 1,

@@ -186,14 +186,43 @@
                 }
             ]
         },
+        "allied_mercenaries": {
+            "name": "Allied Mercenaries",
+            "description": "According to several good primary and secondary sources, a good number of the mercenaries and soldiers present for the conquest of England weren't even in the pay or employ of William. Instead, they were provided or paid for by self-serving allies and opportunists, who hoped to be made powerful lords if he became king.",
+            "subfactions": ["duchy_of_normany", "none"],
+            "category": "core",
+            "min": 1,
+            "max": 2,
+            "rules": ["sell_sword"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Serjeants",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"], 
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "norman_spearmen": {
             "name": "Norman Spear Mercenaries",
             "description": "The Normans were known to have personal mercenaries, possibly Italian, Nordic, Norman, Flemish or French. During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
             "subfactions": ["duchy_of_normany", "none"],
-            "category": "allies",
+            "category": "core",
             "min": 1,
             "max": 2,
-            "rules": [],
+            "rules": ["sell_sword"],
             "keywords": [
                 "Infantry"
             ],
@@ -208,6 +237,64 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield","hand_weapon"], 
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "vet_norman_spearmen": {
+            "name": "Veteran Spear Mercenaries",
+            "description": "The Normans were known to have personal mercenaries, possibly Italian, Nordic, Norman, Flemish or French. During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
+            "subfactions": ["duchy_of_normany", "none"],
+            "category": "core",
+            "min": 1,
+            "max": 2,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Serjeants",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"], 
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "Axemen mercenaries": {
+            "name": "Veteran Axe Mercenaries",
+            "description": "The Normans had access to many Bretons, Normans, Danes, and Scandinavians skilled with the axe. During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
+            "subfactions": ["duchy_of_normany", "none"],
+            "category": "core",
+            "min": 1,
+            "max": 2,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Serjeants",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_axe", "shield"], 
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
                     "min": 5,
@@ -290,14 +377,41 @@
                 "courage": 5,
                 "movement": 6,
                 "shoot": 5,
-                "fight": 5,
+                "fight": 6,
                 "defense": 5,
-                "reflexes": 5,
+                "reflexes": 6,
                 "wounds": 1,
                 "weapons": ["spartha", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
                             {"replaceWeapon": "javelin", "withWeapon": "lance"}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "mercenary_crossbowmen": {
+        "name": "mercenary Crossbowmen",
+        "description": "With the heavy use of experienced mercenaries in the Norman armies of the period, it's not suprising that mercenaries trained with the crossbow were included.",
+        "subfactions": ["duchy_of_normany","italo_normans", "none"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": ["skirmisher_formation"],
+        "keywords": ["Infantry"],
+        "models": [
+            {
+                "name": "Lowborn",
+                "courage": 5,
+                "movement": 7,
+                "shoot": 5,
+                "fight": 4,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 1,
+                "weapons": ["crossbow", "hand_weapon"],
+                "options": [{"addRule": "light_armor"}
+                    ],
                 "min": 5,
                 "max": 10
             }

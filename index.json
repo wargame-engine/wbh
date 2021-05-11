@@ -5,18 +5,19 @@
         ,"alliance": "north_sea"},
         "saxons": {"name": "Saxons", "id": "saxons", "url": "saxons.json", "color": "#594228"},
         "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#6372AA"},
-        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA"
-            ,"alliance": "north_sea"},
+        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA", "secondary_color": "#BDBDBD",
+     "alliance": "north_sea"},
         "norse": {"name": "Norse", "id": "norse", "url": "norse.json", "color": "#6372AA",
     "secondary_color": "9f0807"
     ,
-    "alliance": "north_sea",
-    "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"}
+    "alliance": "north_sea"
     },
-    "alliances": {"north_sea": {"name": "Danelaw/North Sea Empire"}}},
+    "alliances": {"north_sea": {"name": "Danelaw/North Sea Empire"}}
+},
     "unfinished_factions": {
         "poles": {"name": "Poles", "id": "poles", "url": "poles.json", "color": "#D83658", "alliance": "north_sea"}
-    },
+    ,
+    "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"}},
     "categories": {
         "command": {"name": "Command"},
         "cavalry": {"name": "Cavalry"},
@@ -143,15 +144,19 @@
         "lead_by_example" : {
                                         "name" : "Lead By Example",
                                         "description" : "This unit can be merged with any other unit, will be harmed after that unit is.",
-                                        "points" : 5
+                                        "points" : 0
                                     
         },
         "army_general" : {
             "name" : "Army General",
             "description" : "Friendly units within 12' of this unit do not experience 'Warband'.",
-            "points" : 5
-        
-},
+            "points" : 5},
+        "horse_armor": {
+                "name": "Horse Armor",
+                "hidden": true,
+                "description_short": "+1 Save",
+                "description": "This model gets +1 Save",
+                "points": ["constants.defenseCost"]},
 "field_orders": {
     "name": "Field Orders",
     "inputs": ["x"],

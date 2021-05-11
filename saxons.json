@@ -26,7 +26,7 @@
     "units": {
         "ceorl": {
             "name": "Ceorl Militia",
-            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. Even before the Anglo-Saxon traditions of a trained militia, there was the practice of the 'hundradeflocc' as recorded by the Romans. Reportively a German noble was required to provide a hundred 'picked' men to form a militia, during emergencies or to add extra numbers in times of war.",
             "subfactions": ["heptarchy"],
             "category": "core",
             "min": 1,
@@ -52,7 +52,7 @@
         },
             "lowborn_spear_levy": {
                 "name": "Peasant Spear Levy",
-                "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Saxons were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
+                "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Saxons were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. Indeed the Romans recorded 'Germanic' people as having a practice known as the 'hundradeflocc'. Reportively a German noble was required to provide a hundred 'picked' men to form a militia, during emergencies or to add extra numbers in times of war. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
                 "subfactions": ["sea_raiders", "early_saxon_kingdoms", "none"],
                 "category": "core",
                 "min": 1,
@@ -137,7 +137,7 @@
             "name": "Geoguth Spearmen Warriors",
             "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
             "subfactions": ["heptarchy"],
-            "category": "cpre",
+            "category": "core",
             "min": 1,
             "max": 1,
             "rules": ["warband", "shield", "fierce", "if_it_bleeds"],
@@ -285,8 +285,8 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "weapons": ["spear", "javelin"],
+                    "options": [{"AddRule": "light_armor"}],
                     "min": 5,
                     "max": 10
                 }
