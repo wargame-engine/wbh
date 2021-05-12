@@ -198,6 +198,49 @@
                 }
             ]
         },
+        "rustici": {
+            "name": "Rustici",
+            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry", "Skirmisher"
+            ],
+            "models": [
+                {
+                    "name": "Rustici",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": [
+                        "javelin", "hand_weapon"
+                    ],
+                    "options": [
+                        {
+                            "addWeapon": "shield"
+                        },
+                        {
+                            "replaceWeapon": "javelin",
+                            "withWeapon": [
+                                "spear",
+                                "bow",
+                                "sling"
+                            ]
+                        }
+                    ],
+                    "notes": "Add special rules here",
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "brythonic_skirmishers": {
             "name": "Brythonic Skirmishers",
             "description": "'Brythonic' refers to people who spoke a 'celtic language', mainly the 'Britons' who lived in Brittany, the Welish, and the Britons who once ruled the lands that would become England. Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",

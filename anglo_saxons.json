@@ -85,7 +85,7 @@
                 }
             ]
         },
-        "Merican_thegn": {
+        "merican_thegn": {
             "name": "Merican Thegn Bordweall",
             "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
             "category": "core",
@@ -112,7 +112,7 @@
                 }
             ]
         },
-        "Geburs": {
+        "geburs": {
             "name": "Geburs",
             "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
             "category": "rare",
@@ -155,7 +155,7 @@
                 }
             ]
         },
-        "Huscarl": {
+        "huscarl": {
             "name": "Huscarls",
             "description": "A 'housecarl' (Old Norse húskarl, Old English huscarl, translates to 'house man'), was a type of 'retainer' and loyal fighting man, much like many of the minor nobility. What made the Huscarl special, was how it was a mixture of the cultural tradition of the Saxon gedribt 'hearthguard' and the Norse 'hindmen'.",
             "category": "elite",
