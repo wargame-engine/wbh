@@ -10,18 +10,25 @@
             "background": "Harald Hardrada ('hard ruler'), was a former member of the Nordic royal family who fledand joined the Byzantine Varangian Guard, won many battles and then was banished to Rus. Returning home, he fought another person with royal blood, became king of Norway, fought two wars against his neighboors, before then claiming the English throne and invading. Many of his soldiers were former Varangian Guard."
         },
         "norse": {
-            "name": "Norse (800-1045)",
+            "name": "Norse (800-1015)",
             "phase": "activation",
             "id": "norse",
             "background": "Regular norse."
         }
+    ,
+    "north_sea_empire": {
+        "name": "Norse (1016 and 1035)",
+        "phase": "activation",
+        "id": "north_sea_empire",
+        "background": "Cnut the Great was king of: Denmark, England and Norway; and his empire is known today as the 'North Sea Empire'"
+    }
     },
     "units": {
         "ceorl": {
             "name": "Ceorl Militia",
-            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble.",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. In exchange for their lands and their freedom, these people serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
             "subfactions": ["norse"],
-            "category": "infantry",
+            "category": "rare",
             "min": 1,
             "max": 1,
             "rules": ["warband", "shield", "if_it_bleeds"],
@@ -46,8 +53,7 @@
             "lowborn_spear_levy": {
                 "name": "Lowborn Spear Levy",
                 "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Norse could force subject peoples into their armies at sword or spearpoint, and then they could attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
-                "subfactions": ["norse"],
-                "category": "infantry",
+                "category": "rare",
                 "min": 1,
                 "max": 1,
                 "rules": ["warband", "shield", "if_it_bleeds"],
@@ -73,7 +79,7 @@
             "name": "Subject and Landless Skirmishers",
             "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. The Norse also had subject Irish and Scots fight within the ranks of the skirmishers as well.",
             "subfactions": ["norse", "harald_hardråde"],
-            "category": "infantry",
+            "category": "rare",
             "min": 1,
             "max": 1,
             "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
@@ -98,8 +104,8 @@
         "bondi": {
             "name": "Bondi Leidang militia",
             "description": "Like many other lands, the Norse had a pool of freemen that they would call up for military service if the need was requrired. Technically there was many men required to serve as Bondi within the 'leidang', but calling them all up for service would leave the land fallow, the rocks unmined, and the timber uncut. As such few of the bondi were called up at any time. The bondi, not being professional warriors, liked to guard the flanks and rear of armies, while also providing plenty of archer support.",
-            "subfactions": ["norse", "harald_hardråde"],
-            "category": "infantry",
+            "subfactions": ["norse", "harald_hardråde", "north_sea_empire"],
+            "category": "core",
             "min": 1,
             "max": 1,
             "rules": ["warband", "if_it_bleeds"],
@@ -125,7 +131,7 @@
             "name": "Bondi Leidang bowmen",
             "description": "Like many other lands, the Norse had a pool of freemen that they would call up for military service if the need was requrired. Technically there was many men required to serve as Bondi within the 'leidang', but calling them all up for service would leave the land fallow, the rocks unmined, and the timber uncut. As such few of the bondi were called up at any time. The bondi, not being professional warriors, liked to guard the flanks and rear of armies, while also providing plenty of archer support.",
             "subfactions": ["norse", "harald_hardråde"],
-            "category": "infantry",
+            "category": "core",
             "min": 1,
             "max": 1,
             "rules": ["warband", "if_it_bleeds", "light infantry"],
@@ -151,7 +157,7 @@
             "name": "Youngmen Warriors",
             "description": "According to some written sources, the Norse and Vikings were organized like the Saxons were during their early raiding days. As such, younger men seeking fame and plunder would form into bands with the most charismatic as their leader. Eventually, with enough experience and renown, they could lead their own bands, or join a more accomplished one.",
             "subfactions": ["norse", "harald_hardråde"],
-            "category": "infantry",
+            "category": "core",
             "min": 1,
             "max": 1,
             "rules": ["warband", "fierce", "if_it_bleeds"],
@@ -179,10 +185,10 @@
             "name": "Veteran Norse Raiders",
             "description": "Besides the younger men, are the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Viking, Norse, or Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
             "subfactions": ["norse", "harald_hardråde"],
-            "category": "infantry",
+            "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds"],
+            "rules": ["warband", "if_it_bleeds", "stubborn"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -207,7 +213,7 @@
             "name": "Hindmen",
             "description": "The hindmen were the professional 'household' troops of a lord or noble with power over a settlement. They were well equipped and trained, and in the earlier years could've been accomplished viking raiders who stood by proud, and successful leaders of viking raids. Regardless of the exact year and reason for their fighting, they were terrifying and brutal fighters, often using the axe to shatter the shields of other norsemen, or shields of Anglo-Saxons or Franks.",
             "subfactions": ["norse"],
-            "category": "infantry",
+            "category": "elite",
             "min": 1,
             "max": 1,
             "rules": ["light_infantry"],
@@ -227,7 +233,41 @@
                     "weapons": ["hand_axe", "shield"],
                     "options": [{"addWeapon": "javelin"},
                         {"replaceWeapon": "shield", 
-                            "withWeapon": ["two_handed_axe"]}],
+                            "withWeapon": ["two_handed_axe"]},
+                        {"addRule": "harder_than_iron"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "tinglid": {
+            "name": "Tinglid",
+            "description": "The hindmen were the professional 'household' troops of Cnut the Great, and those loyal to him. They were well equipped and trained, and in the earlier years could've been accomplished viking raiders who stood by proud, and successful leaders of viking raids. Regardless of the exact year and reason for their fighting, they were terrifying and brutal fighters, often using the axe to shatter the shields of other norsemen, or shields of Anglo-Saxons or Franks.",
+            "subfactions": ["norse"],
+            "category": "elite",
+            "min": 1,
+            "max": 1,
+            "rules": ["light_infantry", "fanatic"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Hindman",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_axe", "shield"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "shield", 
+                            "withWeapon": ["two_handed_axe"]},
+                        {"addRule": "harder_than_iron"},
+                        {"replaceWeapon": "hand_axe", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_axe", "withWeapon": ["spear"]}],
                     "min": 5,
                     "max": 10
                 }
@@ -236,11 +276,11 @@
     "norse_varangian_guard": {
         "name": "Hardråde's Varangian Guard",
         "description": "As Harold Hardråde had served in the Varangian Guard and many of them men had been banished with him from the Byzantine Empire. Recruiting them to follow him in battle again, but in his own pay, they served him when he was King of Norway, and helped him attempt to become King of England as well.", 
-        "category": "infantry",
+        "category": "elite",
         "subfactions": ["harald_hardråde"],
         "min": 1,
         "max": 1,
-        "rules": [],
+        "rules": ["fanatic"],
         "keywords": [
             "Infantry"
         ],
@@ -275,7 +315,7 @@
         "keywords": ["Infantry"],
         "models": [
             {
-                "name": "Eorl",
+                "name": "Jarl",
                 "courage": 6,
                 "movement": 6,
                 "shoot": 6,
@@ -292,6 +332,34 @@
                 "max": 1
             }
         ]
+    },
+    "hersir": {
+        "name": "Hersir",
+        "description": "The Hersirs were mean who were trusted by their Jarl to organize a portion of his hands, to protect him, and avenge his death if need be. Many Hersirs had their own personal armies and a group or groups of hindmen as bodyguards.",
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Hersir",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "shield"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "shield", 
+                        "withWeapon": ["two_handed_axe"]}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
     }
 },
     "weapons": {},
@@ -302,7 +370,14 @@
             "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
             "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
             "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
-            "points": [-1]}},
+            "points": [-1]},
+        "harder_than_iron": {
+                "name": "Harder Than Iron",
+                "hidden": false,
+                "description_short": "When 'Berserking', this unit gets +1 saves.",
+                "description":  "",
+                "flavor":"",
+                "points": ["constants.defenseCost"]},
     "relics": [],
     "strategies": [{
         "subfactions": ["harald_hardråde"],
@@ -318,4 +393,4 @@
         "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
         "flavor": "Many years of campaigning have given the late Saxon kingdoms or the early raiders a pool of hardened veterans.",
         "cost": 1
-}]}
+}]}}
