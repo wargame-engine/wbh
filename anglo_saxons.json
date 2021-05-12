@@ -325,6 +325,7 @@
             "name": "Eorl",
             "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
             "category": "command",
+            "subfactions": ["late_kent", "merica", "wessex", "none"],
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
@@ -351,8 +352,9 @@
         },
         "ealdorman": {
             "name": "Ealdorman",
-            "description": "Below the Eorls were the Ealdormen, who were the appointed rulers of 'shires' and/or members of previously defeated royal families. As such, not every Ealdorman was equal, with the previous leaders of kingdoms having remained part of their power, just with a new King ruling over them.",
+            "description": "Below the Eorls were the Ealdormen, who were the appointed rulers of 'shires' and/or members of previously defeated royal families. As such, not every Ealdorman was equal, with the previous leaders of kingdoms having remained part of their power, just with a new King ruling over them. This position was political and not a social rank.",
             "category": "command",
+            "subfactions": ["late_kent", "merica", "wessex", "none"],
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
@@ -371,6 +373,59 @@
                     "options": [{"addRule": "war_horse"},
                         {"replaceWeapon": "spear_and_shield", 
                             "withWeapon": ["two_handed_axe"]}
+                        ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "aetheling": {
+            "name": "Aetheling",
+            "description": "The word 'Aetheling' was desended from Saxon, Germanic, and Anglos words, and meant 'belonging to, a royal family'. This term was often used for princes and people of the royal family, who were not the king or queen.",
+            "category": "command",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "buckler"],
+            "keywords": ["command"],
+            "models": [
+                {
+                    "name": "aetheling",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["spartha", "javelin"],
+                    "options": [{"addRule": "war_horse"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cyning": {
+            "name": "Cyning",
+            "description": "The term 'Cyning', is a sibling word of 'king' and as such has the same meaning. As such, the 'Cyning' ruled over a 'Cyningdom', of which there was many before any specific Cyningdom was able to conquer the others.",
+            "category": "command",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader", "buckler"],
+            "keywords": ["command"],
+            "models": [
+                {
+                    "name": "Cyning",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 8,
+                    "wounds": 2,
+                    "weapons": ["spartha","javelin"],
+                    "options": [{"addRule": "war_horse"}
                         ],
                     "min": 1,
                     "max": 1

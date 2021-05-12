@@ -408,8 +408,7 @@
                     "max": 10
                 }
             ]
-        }
-    },
+        },
     "late_heavy_hearthguard": {
         "name": "Heavy Hearthguard",
         "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
@@ -443,6 +442,59 @@
             }
         ]
     },
+    "aetheling": {
+        "name": "Aetheling",
+        "description": "The word 'Aetheling' was desended from Saxon, Germanic, and Anglos words, and meant 'belonging to, a royal family'. This term was often used for princes and people of the royal family, who were not the king or queen.",
+        "category": "command",
+        "subfactions": ["early_saxon_kingdoms", "sea_raiders", "heptarchy", "none"],
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "buckler"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "aetheling",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "javelin"],
+                "options": [{"addRule": "war_horse"}],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    },
+    "cyning": {
+        "name": "Cyning",
+        "description": "The term 'Cyning', is a sibling word of 'king' and as such has the same meaning. As such, the 'Cyning' ruled over a 'Cyningdom', of which there was many before any specific Cyningdom was able to conquer the others.",
+        "category": "command",
+        "subfactions": [ "early_saxon_kingdoms", "heptarchy", "none"],
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Cyning",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "javelin"],
+                "options": [{"addRule": "war_horse"}],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    }
+},
     "weapons": {},
     "rules": {
         "fierce": {

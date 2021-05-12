@@ -416,7 +416,70 @@
                 "max": 10
             }
         ]
-    }},
+    },
+    "dux": {
+        "name": "Dux",
+        "description": "Dux, was a latin word meaning 'leader' or 'general'. The Dux made up the upper echelons of power in Frankish society, and the word would evolve into the familiar 'Duke'.",
+        "subfactions": ["early_merovingian_franks","later_merovingian_franks", "none", "carolingian_french"],
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Dux",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "shield", "javelin"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "javelin", 
+                        "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "spear_and_shield", 
+                            "withWeapon": "bow"}
+                        ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    },
+    "comes": {
+        "name": "Comes",
+        "description": "A Comes (plural, comites), was another latin word, like 'Dux'. This word meant 'companion', but increasingly among late Romans and 'Migration Era' Germanic peoples, meant 'military leader'. This word eventually evolved into the term 'count' and under the Franks, became a rank of nobility.",
+        "subfactions": ["none", "carolingian_french"],
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Comes",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spear_and_shield", "javelin"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "javelin", 
+                        "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "spear_and_shield", 
+                            "withWeapon": "bow"}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    }
+},
     "weapons": {},
     "rules": {
         "fierce": {

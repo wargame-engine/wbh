@@ -66,6 +66,7 @@
         "hand_axe": {"name": "One Handed Axe", "attacks": 1, "short": "Melee", "ap": 2},
         "two_handed_axe": {"name": "Two Handed Axe", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "rending"}]},
         "shield": {"name" : "Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}]},
+        "large_shield": {"name" : "Large Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "large_shield"}]},
         "spear_and_shield": {"name" : "Spear and Shield", "attacks" : 0, "short" : "Melee", "rules" : [{"id" : "shield"}, {"id": "reach", "x": 2}]}
     },
     "rules": {
@@ -75,6 +76,11 @@
             "description_short": "+1 Save",
             "description": "This model gets +1 Save",
             "points": ["constants.defenseCost"]},
+        "large_shield": {
+                "name": "Large Shield",
+                "hidden": true,
+                "description_short": "+2 Save against ranged and +1 Save against everything else.",
+                "points": ["constants.defenseCost"]},
         "buckler": {
                 "name": "Buckler",
                 "hidden": true,
