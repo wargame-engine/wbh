@@ -115,6 +115,115 @@
                 }
             ]
         },
+        "limitanei": {
+            "name": "Limitanei",
+            "description": "While more recent research has increasingly provne that Limitanei were professional soldiers, there is still plenty of indicate that their level of training, regular pay, and equipment degraded over time. This unit can also represent late auxillary forces, or romanized people trained to fight as light infantry. This unit also represents forces that can fight shoulder to shoulder, but prefer to be more mobile, while also not being trained in the 'shield wall' tactic.",
+            "subfactions": ["late_roman"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield", "light_infantry"
+                
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Limitanei",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [
+                        {"replaceWeapon": "shield", "withWeapon":"bow"},
+                        {"addWeapon": "javelin"},
+                        {"addWeapon": "heavy_throwing_spear"},
+                        {"addRule": "light_armor"}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "guard_limitanei": {
+            "name": "Limitanei",
+            "description": "This unit represents limianei and light infantry, that have more practice as skirmishers and archers. These units became increasing common among all roman forces in the later era.",
+            "subfactions": ["late_roman"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield", "light_infantry", "stubborn"
+                
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Limitanei",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [
+                        {"replaceWeapon": "shield", "withWeapon":"bow"},
+                        {"addWeapon": "javelin"},
+                        {"addWeapon": "heavy_throwing_spear"},
+                        {"addRule": "light_armor"}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "guard_milites": {
+            "name": "'Guard' Milites",
+            "description": "There are many arguments among scholars, about the exact level of quality the late romans were capable of, in terms of training, material, and experience. This unit represents the 'lowest common denominator', of what the best late roman units were like, which is legionaries that are simply better trained",
+            "subfactions": ["late_roman"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield", "stubborn"
+                
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Legionary",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spartha"],
+                    "options": [
+                        {"replaceRule": "shield", "withRule": "large shield"},
+                        {"replaceWeapon": "sword", "withWeapon":"spear"},
+                        {"addWeapon": "javelin"},
+                        {"addWeapon": "heavy_throwing_spear"},
+                        {"addRule": "light_armor"}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "equites": {
             "name": "Equites",
             "description": "The 'Equites' were members of a landowning social class, much like minor nobility. In many cultures, a warrior who could afford a horse, often fought mounted, and thus the wealthy and nobles made up much of the cavalry. The Romans and those who adopted elements of their culture were no exception.",
@@ -169,7 +278,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spartha"],
                     "options": [
