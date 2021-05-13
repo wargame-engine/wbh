@@ -161,7 +161,7 @@
             "category": "elite",
             "min": 1,
             "max": 2,
-            "rules": ["shield"],
+            "rules": [],
             "keywords": [
                 "Infantry"
             ],
@@ -175,11 +175,11 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear_and_shield"
+                    "weapons": ["spear", "shield"
                     ],
                     "options": [
                         {"addWeapon": "javelin"},
-                        {"replaceWeapon": "spear_and_shield",
+                        {"replaceWeapon": ["spear", "shield"],
                             "withWeapon": ["two_handed_axe"]}
                     ],
                     "min": 5,
@@ -341,8 +341,9 @@
                     "reflexes": 8,
                     "wounds": 2,
                     "weapons": ["spear", "shield"],
-                    "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "spear_and_shield", 
+                    "options": [
+                        {"addWeapon": "javelin"}, {"addRule": "war_horse"},
+                        {"replaceWeapon": ["spear", "shield"],
                             "withWeapon": ["two_handed_axe"]}
                         ],
                     "min": 1,
@@ -371,7 +372,7 @@
                     "wounds": 2,
                     "weapons": ["spear", "shield"],
                     "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "spear_and_shield", 
+                        {"replaceWeapon": ["spear", "shield"],
                             "withWeapon": ["two_handed_axe"]}
                         ],
                     "min": 1,
@@ -526,7 +527,7 @@
         "subfactions": ["merica", "wessex", "late_kent"],
         "name": "Combined Units",
         "phase": "activation",
-        "description": "Any unitwith 'Thegn' in the title can be 'merged' with any unit that has 'Ceorl' in its name. ",
+        "description": "Any unit with 'Thegn' in the title can be 'merged' with any unit that has 'Ceorl' in its name. ",
         "flavor": "Many years of campaigning have given Wessex or the Anglian kingdoms a pool of hardened veterans.",
         "cost": 1
     }] 

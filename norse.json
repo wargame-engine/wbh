@@ -325,7 +325,7 @@
                 "wounds": 3,
                 "weapons": ["spear", "shield"],
                 "options": [{"addRule": "war_horse"},
-                    {"replaceWeapon": "spear_and_shield", 
+                    {"replaceWeapon": ["spear", "shield"], 
                         "withWeapon": ["two_handed_axe"]}
                     ],
                 "min": 1,
@@ -393,4 +393,21 @@
         "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
         "flavor": "Many years of campaigning have given the late Saxon kingdoms or the early raiders a pool of hardened veterans.",
         "cost": 1
-}]}}
+}
+,{
+    "subfactions": ["norse", "harald_hardråde","north_sea_empire"],
+    "name": "Boar Snout",
+    "phase": "activation",
+    "description": "A selected unit gains +1 AP for all their melee weapons, during a charge.",
+    "flavor": "",
+    "cost": 1
+}
+,{
+    "subfactions": ["norse", "harald_hardråde", "north_sea_empire"],
+    "name": "Going Berserk",
+    "phase": "activation",
+    "description": "A selected unit gains +1 Strength till the end of the turn, but they can't use the turn to move away from the closest enemy.",
+    "flavor": "",
+    "cost": 1
+}
+]}}

@@ -390,6 +390,35 @@
             }
         ]
     },
+    "allied_knights": {
+        "name": "Allied Knights",
+        "description": "These 'knights' are mercenaries and allies from Brittany, or the Franks. Being of the later Frankish era, they have suitable horses and kit for being 'shock cavalry', but they don't have all the right equipment. They do however, have better training in ranged weaponary then most and are quite experienced, being mercenaries.",
+        "subfactions": ["duchy_of_normany"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["furious_charge"],
+        "keywords": [
+            "Infantry"
+        ],
+        "models": [
+            {
+                "name": "Knights",
+                "courage": 5,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "shield", "javelin"],
+                "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"},
+                            {"replaceWeapon": "javelin", "withWeapon": "spear"}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
     "mercenary_crossbowmen": {
         "name": "mercenary Crossbowmen",
         "description": "With the heavy use of experienced mercenaries in the Norman armies of the period, it's not suprising that mercenaries trained with the crossbow were included.",
@@ -440,7 +469,7 @@
                 "options": [{"addRule": "war_horse"},
                     {"replaceWeapon": "javelin", 
                         "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
-                        {"replaceWeapon": "spear_and_shield", 
+                        {"replaceWeapon": "shield", 
                             "withWeapon": "bow"}
                         ],
                 "min": 1,
@@ -467,11 +496,11 @@
                 "defense": 6,
                 "reflexes": 7,
                 "wounds": 2,
-                "weapons": ["spear_and_shield", "javelin"],
+                "weapons": ["spear", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"},
                     {"replaceWeapon": "javelin", 
                         "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
-                        {"replaceWeapon": "spear_and_shield", 
+                        {"replaceWeapon": ["spear", "shield"], 
                             "withWeapon": "bow"}
                     ],
                 "min": 1,
