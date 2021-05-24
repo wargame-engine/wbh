@@ -2,11 +2,23 @@
     "id": "romans",
     "name": "Romans",
     "subfactions": {
-        "lame_roman": {
+        "late_roman": {
         "name": "Late Romans (400-500 AD)",
         "phase": "activation",
         "id": "late_roman",
         "background": ""
+    },
+    "slightly_late_roman": {
+        "name": "Late Romans (300-399 AD)",
+        "phase": "activation",
+        "id": "slightly_late_roman",
+        "background": ""
+    },
+    "early_byzantine_empire": {
+        "name": "Early Byzantine Empire (501-600 AD)",
+        "phase": "activation",
+        "id": "early_byzantine_empire",
+        "background": "The people of this era referred to themselves as 'Romans', but were successors of the eastern half of the empire. This period includes the reign of 'Justinian I', who managed to, for a time, to reconquer Italia and Northern Africa."
     }
 },
     "units": {
@@ -44,9 +56,9 @@
             ]
         },
         "worst_legionaries": {
-            "name": "Tirone Pedyt",
+            "name": "Tirone Pedes",
             "description": "The Pedyt (The ancestor of the word 'pawn) came from the Latin, Pedes, for 'foot soldier. This is term often used for soldiers of the period, especially Roman ones. The Tirones were new roman recruits, with less then 6 months of training, typically. The Late Romans also practiced conscription and this unit could represent such troops.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -80,12 +92,12 @@
         },
         "milites": {
             "name": "Milites",
-            "description": "The Latin term 'Milites' was another word for a 'professional soldier', and during the early part of the middle ages, was a term used also used for warriors that were minor nobility (knights).",
-            "subfactions": ["late_roman"],
+            "description": "The Latin term 'Milites' was another word for a 'professional soldier', and during the early part of the middle ages, was a term used also used for warriors that were minor nobility (knights). This unit represents full-time, professional, properly trained 'legionaries', which were often found within the 'Comitatenses' (Mobile Armies).",
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["shield"
+            "rules": ["shield", "light_armor"
                 
             ],
             "keywords": [
@@ -106,8 +118,7 @@
                         {"replaceRule": "shield", "withRule": "large shield"},
                         {"replaceWeapon": "sword", "withWeapon":"spear"},
                         {"addWeapon": "javelin"},
-                        {"addWeapon": "heavy_throwing_spear"},
-                        {"addRule": "light_armor"}
+                        {"addWeapon": "heavy_throwing_spear"}
                     ],
                     "rules": [],
                     "min": 5,
@@ -118,7 +129,7 @@
         "limitanei": {
             "name": "Limitanei",
             "description": "While more recent research has increasingly provne that Limitanei were professional soldiers, there is still plenty of indicate that their level of training, regular pay, and equipment degraded over time. This unit can also represent late auxillary forces, or romanized people trained to fight as light infantry. This unit also represents forces that can fight shoulder to shoulder, but prefer to be more mobile, while also not being trained in the 'shield wall' tactic.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -152,9 +163,9 @@
             ]
         },
         "guard_limitanei": {
-            "name": "Limitanei",
-            "description": "This unit represents limianei and light infantry, that have more practice as skirmishers and archers. These units became increasing common among all roman forces in the later era.",
-            "subfactions": ["late_roman"],
+            "name": "'Guard' Limitanei",
+            "description": "This unit represents limianei and light infantry, that have more practice and experience as skirmishers and archers. These units (skirmishers and archers) became increasing common among all roman forces in the later era.",
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -188,13 +199,13 @@
             ]
         },
         "guard_milites": {
-            "name": "'Guard' Milites",
-            "description": "There are many arguments among scholars, about the exact level of quality the late romans were capable of, in terms of training, material, and experience. This unit represents the 'lowest common denominator', of what the best late roman units were like, which is legionaries that are simply better trained",
-            "subfactions": ["late_roman"],
+            "name": "Palatini Milites",
+            "description": "Seperate from the Limitanei and the Comitatenses, were the Palatini (Palace Troops), who were better paid and respected. While these units started out as troops personally organized and commanded by the Emperor, in some documents they are so plentiful, that they can't all be elite. There are many arguments among scholars, about the exact level of quality the late romans were capable of, in terms of training, material, and experience. This unit represents the 'lowest common denominator', of what the best late roman units were like, which is legionaries that are simply better trained",
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["shield", "stubborn"
+            "rules": ["shield", "stubborn", "light_armor"
                 
             ],
             "keywords": [
@@ -215,8 +226,7 @@
                         {"replaceRule": "shield", "withRule": "large shield"},
                         {"replaceWeapon": "sword", "withWeapon":"spear"},
                         {"addWeapon": "javelin"},
-                        {"addWeapon": "heavy_throwing_spear"},
-                        {"addRule": "light_armor"}
+                        {"addWeapon": "heavy_throwing_spear"}
                     ],
                     "rules": [],
                     "min": 5,
@@ -227,7 +237,7 @@
         "equites": {
             "name": "Equites",
             "description": "The 'Equites' were members of a landowning social class, much like minor nobility. In many cultures, a warrior who could afford a horse, often fought mounted, and thus the wealthy and nobles made up much of the cavalry. The Romans and those who adopted elements of their culture were no exception.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -259,12 +269,12 @@
         },
         "semissalis": {
             "name": "Semissalis",
-            "description": "Semissalis (Veterans) were the best men in the'Cohors peditata' (Meaning infantry organized into 'Cohorts' according to the Marian reforms). These men were similar to the 'principes' and 'triarii' of the Republican Era, men who through time and experience managed to become well equiped and hardy fighters.",
-            "subfactions": ["late_roman"],
-            "category": "core",
+            "description": "Semissalis (Veterans) were the best men in the'Cohors peditata' (Meaning infantry organized into 'Cohorts' according to the Marian reforms). These men were similar to the 'principes' and 'triarii' of the Republican Era, men who through time and experience managed to become well equiped and hardy fighters. Pay was one and a half that of standard legionaries. This unit could also represent the 'Palatine' in charge of protecting the Emperor, or men personally handpicked to be within a personal army.",
+            "subfactions": ["late_roman", "slightly_late_roman"],
+            "category": "elite",
             "min": 1,
             "max": 1,
-            "rules": ["shield"
+            "rules": ["shield", "light_armor"
                 
             ],
             "keywords": [
@@ -286,8 +296,7 @@
                         {"replaceWeapon": "sword", "withWeapon":"spear"},
                         {"addWeapon": "javelin"},
                         {"addWeapon": "heavy_throwing_spear"},
-                        {"addWeapon": "plumbata"},
-                        {"addRule": "light_armor"}
+                        {"addWeapon": "plumbata"}
                     ],
                     "rules": [],
                     "min": 5,
@@ -298,11 +307,11 @@
         "equites_cataphractarii": {
             "name": "Equites cataphractarii",
             "description": "The late romans made heavy use of 'equites legionis'. Many of these mounted warriors were actually barbarians recruited from nomadic warrior peoples, and various other cultures with strong traditions of mounted warriors. The best of these warriors saw heavy action in 'the east', and were known as 'Equites cataphractarii'. Despite the fact that these units were rarely deployed in 'the west', many of them had very obviously Gaulish names. It wouldn't be especially  hard for retired Equites cataphractarii, romanized peoples, and various mounted cultures in the west to form their own brand new 'Equites cataphractarii'. Unlike what some people mistakenly believe, the Auxilia 'Sarmatians', were last recorded in the area around the 300s and over time any cavalry traditions they taught would be forgotten.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["shield"
+            "rules": ["shield", "war_horse", "light_armor"
                 
             ],
             "keywords": [
@@ -323,8 +332,7 @@
                         {"replaceWeapon": "spartha", "withWeapon":"spear"},
                         {"addWeapon": "javelin"},
                         {"addWeapon": "heavy_throwing_spear"},
-                        {"addRule": "light_armor"},
-                        {"addRule": "heavy_armor"}
+                        {"replaceRule": "light_armor", "withRule": "heavy_armor"}
                     ],
                     "rules": [],
                     "min": 5,
@@ -335,6 +343,7 @@
         "rustici": {
             "name": "Rustici",
             "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "rare",
             "min": 1,
             "max": 1,
@@ -375,54 +384,10 @@
                 }
             ]
         },
-        "brythonic_skirmishers": {
-            "name": "Rename This",
-            "description": "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers.",
-            "subfactions": ["late_roman"],
-            "category": "core",
-            "min": 1,
-            "max": 1,
-            "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
-            "keywords": [
-                "Infantry", "Skirmisher"
-            ],
-            "models": [
-                {
-                    "name": "Brythonic Skirmisher",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": [
-                        "javelin", "hand_weapon"
-                    ],
-                    "options": [
-                        {
-                            "addWeapon": "shield"
-                        },
-                        {
-                            "replaceWeapon": "javelin",
-                            "withWeapon": [
-                                "spear",
-                                "bow",
-                                "sling"
-                            ]
-                        }
-                    ],
-                    "notes": "Add special rules here",
-                    "rules": [],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
         "dux": {
             "name": "Dux",
             "description": "Dux, was a latin word meaning 'leader' or 'general'. The Dux was a powerful military rank under the late Romans. As the Romano-British were a people 'one foot in the door of the classical period and one foot out the door into the middle ages', they used the term in such a fashion. At first the Dux was a professional who had worked his way up the ranks and been selected to command. Then the Dux was a general who styled himself a 'protector', but basically was a warlord. Then over time the title was made hereditary  and passed down, till it became the noble title of 'Duke'.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "command",
             "min": 1,
             "max": 1,
@@ -453,7 +418,7 @@
         "comes": {
             "name": "Comes",
             "description": "A Comes (plural, comites), was another latin word, like 'Dux'. This word meant 'companion', but increasingly among late Romans and 'Migration Era' Germanic peoples, meant 'military leader'. This word eventually evolved into the term 'count' and under the Franks and Romano-British, became a rank of nobility.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "command",
             "min": 1,
             "max": 1,
@@ -484,7 +449,7 @@
         "magnate": {
             "name": "Magnate",
             "description": "A 'Magnate' was an appointed offical, powerful landowner, or wealthy merchant. With these kinds of resources, they either were or would eventually become noblity. Such types of men were not military leaders, or part of a military social class, but they could muster fairly reasonable armies of their own.",
-            "subfactions": ["late_roman"],
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "command",
             "min": 1,
             "max": 1,
@@ -513,9 +478,9 @@
             ]
         },
         "early_geoguth": {
-            "name": "Rename This",
-            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a Saxon warband. Typically these men followed less experienced leaders, warlords, and chieftains. According to records and lore, the Saxons were employed by mercenaries to drive away the Picts. Archaeological evidence shows that while half of the Romano-British lands were quick to fall, the rest of the area stayed quite wealthy and urbanized for awhile. Archaeological evidence also shows strong indication of trade with the Byzantines, constant feasting sites along the coast, and plentiful trade of rare tin and valuable wool. Considering that much of 'mainland europe' was being pillaged and was in worse condiiton, the Romano-British would be along the wealthiest and most able to employ 'savages' and 'barbarians' as mercenaries. The romans indeed, had maintained the practice of 'Foederati'",
-            "subfactions": ["late_roman"],
+            "name": "Light Saxon Foederati",
+            "description": "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a Saxon warband. Typically these men followed less experienced leaders, warlords, and chieftains. This unit represents 'Foederati' and barbarian mercenaries, which fight in the 'Saxon style' revolving around the buckler.",
+            "subfactions": ["slightly_late_roman"],
             "category": "core",
             "min": 1,
             "max": 3,
@@ -539,7 +504,7 @@
         },
         "bucellarii": {
             "name": "Bucellarii",
-            "description": "Bodyguard Mercenaries, Latin for 'biscuit-eater'.",
+            "description": "Bodyguard Mercenaries, Latin for 'biscuit-eater', were recruited from 'Romans', Persians, Goths, and Huns, and other groups of people. These soldiers were often very loyal to their specific employers, and quite hardy fighters.",
             "subfactions": ["late_roman"],
             "category": "elite",
             "min": 1,
@@ -577,8 +542,8 @@
         },        
         "mounted_bucellarii": {
             "name": "Mounted Bucellarii",
-            "description": "Bodyguard Mercenaries, Latin for 'biscuit-eater'.",
-            "subfactions": ["late_roman"],
+            "description": "The Bucellarii were reported to make up some of the best cavalry  available to Roman commanders and generals.",
+            "subfactions": ["late_roman", "early_byzantine_empire"],
             "category": "elite",
             "min": 1,
             "max": 1,
@@ -614,12 +579,12 @@
         },
         "foederati": {
             "name": "Foederati",
-            "description": "",
-            "subfactions": ["late_roman"],
-            "category": "rare",
+            "description": "The 'Foederati' (The term comes from a Latin word for 'treaty'), were often allied 'barbarian' peoples or tribes that were bound by treaty and subsidized with land, money, or resources; to act as a 'buffer force' or mercenaries.",
+            "subfactions": ["slightly_late_roman"],
+            "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "shield", "if_it_bleeds"],
+            "rules": ["warband", "shield", "if_it_bleeds", "fierce"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -629,12 +594,12 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["spear", "hand_weapon"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}
+                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]}
                         ],
                     "min": 5,
                     "max": 10
@@ -643,8 +608,8 @@
         },  
         "foederati_veterans": {
             "name": "Foederati Veterans",
-            "description": "",
-            "subfactions": ["late_roman"],
+            "description": "As time passed, warriors would gain renown, experience, and wealth. This meant better equipment and fighting ability.",
+            "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "rare",
             "min": 1,
             "max": 1,
@@ -663,12 +628,42 @@
                     "weapons": ["spear", "hand_weapon"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"}, {"addRule": "light_armor"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}],
+                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]}],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
+        "phoideratoi": {
+            "name": "Phoideratoi",
+            "description": "The 'Phoideratoi' ('Allies'), had evolved from the Foederati and were regularly paid units, that were mixed units consisting of 'romans' and 'barbarians'.",
+            "subfactions": ["early_byzantine_empire"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Phoideratoi",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "hand_weapon"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "war_horse"},
+                        {"replaceRule": "shield", "withRule": "large shield"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]}
+                        ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },  
         "bagaudae": {
             "name": "Bagaudae",
             "description": "Bagaudae (Celtic for 'fighters', Latin for 'brigands'), were revolting peasant warriors. Many of these uprisings were put down, but eventually some of them managed to time themselves with a barbarian invasion. The cause of unrest was excessive taxation,  forced labor, and being treated as property.",
@@ -697,7 +692,16 @@
         }
     },
     "weapons": {},
-    "rules": {},
+    "rules": {
+        "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional shock to become broken.", "points": ["model.wounds"]},
+    "fierce": {
+        "name": "Fierce",
+        "hidden": false,
+        "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+        "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+        "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+        "points": [-1]}
+},
     "relics": [],
     "strategies": [{
         "subfactions": ["late_roman"],

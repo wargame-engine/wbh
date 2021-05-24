@@ -89,7 +89,7 @@
             "description_short": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
             "description": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
             "flavor": "This unit can choose to fight as skirmishers as a loose formation, or 'close up' to fight as traditional infantry.",
-            "points": [2]
+            "points": [1]
         },
         "warband": {
             "name": "Warband",
@@ -131,7 +131,16 @@
             "name": "Field Orders",
             "inputs": ["x"],
             "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* Re-roll Strength rolls of 9+ \n* +3\" Movement \n\nA unit may only benefit from one Field Order.",
-            "points": [15, {"multiply": "rule.x"}]
-        }
+            "points": [15, {"multiply": "rule.x"}
+            ]},
+            "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional shock to become broken.", "points": ["model.wounds"]},
+            "fierce": {
+                "name": "Fierce",
+                "hidden": false,
+                "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+                "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+                "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+                "points": [-1]}
+        
     }
 }
