@@ -51,8 +51,8 @@
             ]
         },
             "lowborn_spear_levy": {
-                "name": "Lowborn Spear Levy",
-                "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Norse could force subject peoples into their armies at sword or spearpoint, and then they could attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
+                "name": "Thrall Spear Levy",
+                "description": "The 'Thrall' was a social class below 'Carl'. Thralls included peasants tied to the land and slaves. Due to the plentiful supply of landless/enslaved men, spears, and shields; it is likely that if the Norse could force subject peoples into their armies at sword or spearpoint, and then they could attempt to form a basic spear levy as was common at the time. Such troops would have to be 'bullied' into a formation, and even if trained at all, weren't trained very well.",
                 "category": "rare",
                 "min": 1,
                 "max": 1,
@@ -76,8 +76,8 @@
                 ]
             },
         "skirmishers": {
-            "name": "Subject and Landless Skirmishers",
-            "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. The Norse also had subject Irish and Scots fight within the ranks of the skirmishers as well.",
+            "name": "Thrall Skirmishers",
+            "description": "A band of the impoverished, landless (Who, if Thralls, would be slaves or tied to the land), men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. Among the Norse, these people could be the slaves (Thralls) and the freed slaves (Leysingi), but they also had subject Irish and Scots fight within the ranks of the skirmishers as well.",
             "subfactions": ["norse", "harald_hardråde"],
             "category": "rare",
             "min": 1,
@@ -112,7 +112,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Bondi",
+                    "name": "Karl",
                     "courage": 5,
                     "movement": 5,
                     "shoot": 5,
@@ -138,7 +138,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Bondi",
+                    "name": "Karl",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -242,7 +242,7 @@
         },
         "tinglid": {
             "name": "Tinglid",
-            "description": "The hindmen were the professional 'household' troops of Cnut the Great, and those loyal to him. They were well equipped and trained, and in the earlier years could've been accomplished viking raiders who stood by proud, and successful leaders of viking raids. Regardless of the exact year and reason for their fighting, they were terrifying and brutal fighters, often using the axe to shatter the shields of other norsemen, or shields of Anglo-Saxons or Franks.",
+            "description": "The Tinglid were the professional 'household' troops of Cnut the Great, and those loyal to him. They were well equipped and trained, and in the earlier years could've been accomplished viking raiders who stood by proud, and successful leaders of viking raids. Regardless of the exact year and reason for their fighting, they were terrifying and brutal fighters, often using the axe to shatter the shields of other norsemen, or shields of Anglo-Saxons or Franks.",
             "subfactions": ["norse"],
             "category": "elite",
             "min": 1,
@@ -307,7 +307,7 @@
     },
     "jarl": {
         "name": "Jarl",
-        "description": "Below the rank of 'king', there was the rank of 'Jarl', which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself. Often the Jarl had a chance to end up king himself, or was the leader of a distant settlement, which might revolt and become it's own kingdom or something like a duchy.",
+        "description": "Below the rank of 'king', there was the rank of 'Jarl' (Which has a common shared ancestor  with the word 'Earl'), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself. Often the Jarl had a chance to end up king himself, or was the leader of a distant settlement, which might revolt and become it's own kingdom or something like a duchy.",
         "category": "command",
         "min": 1,
         "max": 1,

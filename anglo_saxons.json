@@ -323,7 +323,7 @@
         },
         "earl": {
             "name": "Eorl",
-            "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
+            "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl, which was a had a common shared ancestor  with the word 'Jarl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
             "category": "command",
             "subfactions": ["late_kent", "merica", "wessex", "none"],
             "min": 1,
