@@ -1,0 +1,329 @@
+{
+    "id": "franks",
+    "name": "Franks",
+    "subfactions": {
+        "bretons": {
+            "name": "Bretons (768-1065 AD)",
+            "phase": "activation",
+            "id": "bretons",
+            "background": ""
+    }},
+    "units": {
+        "skirmishers": {
+            "name": "Landless Skirmishers",
+            "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
+            "subfactions": ["bretons", "none"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Lowborn",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["javelin", "hand_weapon"],
+                    "options": [{"replaceWeapon": "javelin", "withWeapon": [
+                                "bow",
+                                "sling"
+                            ]},
+                            [{"AddRule": "buckler"}]
+                        ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "coloni_skirm": {
+            "name": "Coloni Skirmishers",
+            "description": "A band of the impoverished and landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. These 'Coloni' were fond of the bow, but generally used any ranged weapon that would prevent them from having to fight in melee. This was a common fate of people called to service, but incredibly poor, extending all the way back to the Republican Romans.",
+            "subfactions": ["bretons"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Lowborn",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["javelin", "hand_weapon"],
+                    "options": [
+                        {"replaceWeapon": "javelin", "withWeapon": ["sling"]},
+                            [{"AddRule": "buckler"}]
+                        ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "coloni_archers": {
+            "name": "Coloni Archers",
+            "description": "A band of the impoverished and landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. These 'Coloni' were fond of the bow, but generally used any ranged weapon that would prevent them from having to fight in melee. This was a common fate of people called to service, but incredibly poor, extending all the way back to the Republican Romans.",
+            "subfactions": ["bretons"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Lowborn",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["bow", "hand_weapon"],
+                    "options": [
+                        ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        
+        "liberi": {
+            "name": "Liberi",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "subfactions": ["bretons"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "light_infantry"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "liberi_skirmishers": {
+            "name": "Liberi Skirmishers",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "subfactions": ["bretons"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "light_infantry"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield","hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+    "milites": {
+        "name": "Breton Milites",
+        "description": "The milites (Previously a Roman term for 'soldier) were a professional soldier class, who often fought on horseback, as had increasingly been the tradition and focus of the Franks over the previous few hundred years. While similar to the 'knights' of later periods, which this class would evolve into (Especially for the Normans), they focused less on the thrusting spear or lance, and more on the throwing spear and sword.",
+        "subfactions": ["bretons"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["furious_charge", "light_cavalry"],
+        "keywords": [
+            "Infantry"
+        ],
+        "models": [
+            {
+                "name": "Milites",
+                "courage": 5,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["sword", "shield", "javelin"],
+                "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                            {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                            {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                            {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                            {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "latest_pueri": {
+        "name": "Pueri Light cavalry ",
+        "description": "Pueri ('Boys') stopped being a term specificly for the personial guard of nobles, and started being a term for poorer nobles, squires, and 'Franci'/'Liberi' who had their own mail and horse, but weren't stuck paying for the equipment of a milites.",
+        "category": "core",
+        "subfactions": ["carolingian_french"],
+        "min": 1,
+        "max": 1,
+        "rules": ["fierce", "light_cavalry"],
+        "keywords": ["Cavalry"],
+        "models": [
+            {
+                "name": "Pueri",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["sword", "shield", "javelin"
+                ],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                    {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                    {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "serjeant_spearmen": {
+        "name": "Serjeant Spear Mercenaries",
+        "description": "During the period after Charlemagne, much of Western Europe (Not Britian) had grown used to seeing mounted warriors making the standard freeman levy 'obsolete'. They were replaced by mercenary 'serjeants' (Translates to 'Servent', but is a term used often for professonal, full-time soldiers), who due to being career mercenaries and having good pay, could build up experience and get better equipment.",
+        "subfactions": ["carolingian_french"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": [],
+        "keywords": [
+            "Infantry"
+        ],
+        "models": [
+            {
+                "name": "Serjeants",
+                "courage": 5,
+                "movement": 6,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spear", "shield","hand_weapon"], 
+                "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                    {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                "min": 5,
+                "max": 10
+            }
+        ],
+    "dux": {
+        "name": "Dux",
+        "description": "Dux, was a latin word meaning 'leader' or 'general'. The Dux made up the upper echelons of power in Frankish society, and the word would evolve into the familiar 'Duke'.",
+        "subfactions": ["early_merovingian_franks","later_merovingian_franks", "none", "carolingian_french"],
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Dux",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "shield", "javelin"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "javelin", 
+                        "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "shield", 
+                            "withWeapon": "bow"}
+                        ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    },
+    "comes": {
+        "name": "Comes",
+        "description": "A Comes (plural, comites), was another latin word, like 'Dux'. This word meant 'companion', but increasingly among late Romans and 'Migration Era' Germanic peoples, meant 'military leader'. This word eventually evolved into the term 'count' and under the Franks, became a rank of nobility.",
+        "subfactions": ["none", "carolingian_french"],
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Comes",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spear", "shield", "javelin"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "javelin", 
+                        "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": ["spear", "shield"], 
+                            "withWeapon": "bow"}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    }
+}
+    },
+    "weapons": {},
+    "rules": {
+        "fierce": {
+            "name": "Fierce",
+            "hidden": false,
+            "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+            "points": [-1]}},
+    "relics": [],
+    "strategies": [{
+        "subfactions": ["sea_raiders"],
+        "name": "Veterans",
+        "phase": "activation",
+        "description": "All units of geoguth may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "flavor": "Many years of campaigning have given the Franks a pool of hardened veterans.",
+        "cost": 1
+    }]}
