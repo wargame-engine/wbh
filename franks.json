@@ -444,7 +444,7 @@
                     "weapons": ["sword", "shield", "javelin"
                     ],
                     "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
                     ],
@@ -475,7 +475,7 @@
                     "weapons": ["sword", "shield", "javelin"
                     ],
                     "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
@@ -507,7 +507,7 @@
                     "weapons": ["sword", "shield", "javelin"
                     ],
                     "options": [{"addRule": "war_horse"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                         {"replaceWeapon": "javelin", "withWeapon": ["spear"]},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
@@ -534,13 +534,13 @@
                 "courage": 5,
                 "movement": 6,
                 "shoot": 5,
-                "fight": 5,
+                "fight": 6,
                 "defense": 5,
-                "reflexes": 5,
+                "reflexes": 6,
                 "wounds": 1,
                 "weapons": ["sword", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                            {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                            {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
                             {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                             {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
@@ -571,7 +571,7 @@
                 "weapons": ["sword", "shield", "javelin"
                 ],
                 "options": [{"addRule": "war_horse"},
-                    {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "angon"}]},
+                    {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                     {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                     {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
                 "min": 5,

@@ -25,6 +25,7 @@
         "legionaries": {
             "name": "Legionaries",
             "description": "Trained Roman legionaries.",
+            "subfactions": ["none", "golden_era"],
             "category": "infantry",
             "min": 1,
             "max": 1,
@@ -32,7 +33,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -57,7 +58,7 @@
         },
         "worst_legionaries": {
             "name": "Tirone Pedes",
-            "description": "The Pedyt (The ancestor of the word 'pawn) came from the Latin, Pedes, for 'foot soldier. This is term often used for soldiers of the period, especially Roman ones. The Tirones were new roman recruits, with less then 6 months of training, typically. The Late Romans also practiced conscription and this unit could represent such troops.",
+            "description": "The Pedyt (The ancestor of the word 'pawn) came from the Latin, Pedes, for 'foot soldier. This is term often used for soldiers of the period, especially Roman ones. The Tirones were new roman recruits, with less then 6 months of training, typically. The Late Romans also practiced conscription and this unit could represent such troops, perhaps the sons of soldiers, who were often brought into the service like their fathers.",
             "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
@@ -90,6 +91,41 @@
                 }
             ]
         },
+        "even_worst_legionaries": {
+            "name": "Conscriptus Pedes",
+            "description": "Being the son of a soldier or being a volunteer, could provide enough obligation to stand and fight, even if lacking experience or enough training. However, for conscripts that had been in the service long enough to be properly trained, there could be reasons for disillusionment  to set in. Wanting to go home and see what had happened to their home communities, or coming from a province now in rebellion. Being part of an usurpers army, not getting paid on time, or seeing cracks in the glory of the Roman Empire; could all leave a soldier unwilling to be part of a battle that isn't going well or would get him killed.",
+            "subfactions": ["late_roman", "slightly_late_roman"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield", "warband", "if_it_bleeds"]
+                ,
+            "keywords": [
+                "Infantry", "drilled"
+            ],
+            "models": [
+                {
+                    "name": "Legionary",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon"],
+                    "options": [
+                        {"replaceRule": "shield", "withRule": "large shield"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon":"spear"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon":"spartha"},
+                        {"addRule": "light_armor"}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "milites": {
             "name": "Milites",
             "description": "The Latin term 'Milites' was another word for a 'professional soldier', and during the early part of the middle ages, was a term used also used for warriors that were minor nobility (knights). This unit represents full-time, professional, properly trained 'legionaries', which were often found within the 'Comitatenses' (Mobile Armies).",
@@ -101,7 +137,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -128,7 +164,7 @@
         },
         "limitanei": {
             "name": "Limitanei",
-            "description": "While more recent research has increasingly provne that Limitanei were professional soldiers, there is still plenty of indicate that their level of training, regular pay, and equipment degraded over time. This unit can also represent late auxillary forces, or romanized people trained to fight as light infantry. This unit also represents forces that can fight shoulder to shoulder, but prefer to be more mobile, while also not being trained in the 'shield wall' tactic.",
+            "description": "While more recent research has increasingly proven that Limitanei were professional soldiers, there is still plenty of indicate that their level of training, regular pay, and equipment degraded over time. This unit can also represent late auxillary forces, or romanized people trained to fight as light infantry. This unit also represents forces that can fight shoulder to shoulder, but prefer to be more mobile, while also not being trained in the 'shield wall' tactic.",
             "subfactions": ["late_roman", "slightly_late_roman"],
             "category": "core",
             "min": 1,
@@ -137,7 +173,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -173,7 +209,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -209,7 +245,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -241,11 +277,11 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["shield", "war_horse", "light_infantry"
+            "rules": ["shield", "war_horse", "light_cavalry"
                 
             ],
             "keywords": [
-                "Infantry"
+                "Calvary" 
             ],
             "models": [
                 {
@@ -278,7 +314,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Infantry", "drilled"
             ],
             "models": [
                 {
@@ -315,7 +351,7 @@
                 
             ],
             "keywords": [
-                "Infantry"
+                "Calvary"
             ],
             "models": [
                 {
@@ -704,11 +740,19 @@
 },
     "relics": [],
     "strategies": [{
-        "subfactions": ["late_roman"],
+        "subfactions": ["late_roman", "slightly_late_roman", "early_byzantine_empire"],
         "name": "Shield Wall",
         "phase": "activation",
         "description": "All units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if charged or targeted by a shooting attack it gets +1 Save. This effect remains in place till the unit moves.",
         "flavor": "The Romans and those who remembered their traditions, used a tactic and model of fighting that involved large shields and fighting shoulder to shoulder in formation.",
+        "cost": 1
+    },
+    {
+        "subfactions": ["late_roman", "slightly_late_roman", "early_byzantine_empire"],
+        "name": "Drilled",
+        "phase": "activation",
+        "description": "Any unit with the keyword 'Drilled', can if charged by an enemy unit, move it's figures a maximum of 2' inches.",
+        "flavor": "With lots of training and practice, Roman soldiers would learn to quickly rotate or adjust formation at a moment's notice. Each man would know where his place was to be, as if by instinct.",
         "cost": 1
     }] 
 }

@@ -322,7 +322,7 @@
         },
         "heavy_hearthguard": {
             "name": "Heavy Hearthguard",
-            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "description": "The Gedribt/Gedriht (pronounced Tedrict/Yedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
             "category": "elite",
             "subfactions": ["sea_raiders", "early_saxon_kingdoms", "none"],
             "min": 1,
@@ -353,7 +353,7 @@
         },
         "early_heavy_hearthguard": {
             "name": "Heavy Hearthguard",
-            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "description": "The Gedribt/Gedriht (pronounced Tedrict/Yedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
             "category": "elite",
             "subfactions": ["sea_raiders"],
             "min": 1,
@@ -384,7 +384,7 @@
         },
         "light_hearthguard": {
             "name": "Light Hearthguard",
-            "description": "The Gedribt (pronounced Tedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "description": "The Gedribt/Gedriht (pronounced Tedrict/Yedrict) was the Saxon lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
             "category": "elite",
             "min": 1,
             "max": 1,

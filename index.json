@@ -4,13 +4,14 @@
         "anglo_saxons": {"name": "Anglo Saxons", "id": "anglo_saxons", "url": "anglo_saxons.json", "color": "#436497", "alliance": "north_sea"},
         "saxons": {"name": "Saxons", "id": "saxons", "url": "saxons.json", "color": "#594228"},
         "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#6372AA"},
-        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA", "secondary_color": "#BDBDBD", "alliance": "north_sea"},
+        "normans_bretons": {"name": "Normans and Bretons", "id": "normans_bretons", "url": "normans.json", "color": "#6372AA", "secondary_color": "#BDBDBD", "alliance": "north_sea"},
+        "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"},
         "norse": {"name": "Norse", "id": "norse", "url": "norse.json", "color": "#6372AA", "secondary_color": "9f0807", "alliance": "north_sea"}
     },
     "alliances": {"north_sea": {"name": "Danelaw/North Sea Empire"}},
     "unfinished_factions": {
         "poles": {"name": "Poles", "id": "poles", "url": "poles.json", "color": "#D83658", "alliance": "north_sea"},
-        "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"}
+        "rus": {"name": "Rus", "id": "rus", "url": "rus.json", "color": "#D83658"}
     },
     "categories": {
         "command": {"name": "Command"},
@@ -36,17 +37,18 @@
         "unarmed": {"name": "Unarmed", "attacks": 1, "short": "Melee"},
         "hand_weapon": {"name": "Hand Weapon", "attacks": 1, "short": "Melee", "ap": 1},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
-        "spartha": {"name": "Spartha", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 1}]},
-        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 2}]},
-        "pike": {"name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 4}]},
-        "crossbow": {"name": "Crossbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
+        "spartha": {"name": "Spartha", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 1}]},
+        "pike": {"name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 2}]},
+        "crossbow": {"name": "Crossbow", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["indirect", "reload"]},
         "javelin": {"name": "Javelins", "attacks": 1, "short": 12, "ap": 1, "rules": ["assault"]},
         "plumbata": {"name": "Plumbata", "attacks": 1, "short": 6, "ap": 2, "rules": [{"id": "sling_volley"}, "assault"]},
         "heavy_throwing_spear": {"name": "Heavy Throwing Spears", "attacks": 1, "short": 12, "ap": 2, "rules": ["assault"]},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "sling_volley"}]},
         "trained_sling": {"name": "Trained Sling", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "sling_volley"}]},
-        "longbow": {"name": "Long Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["indirect"]},
+        "longbow": {"name": "Long Bow", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["indirect"]},
+        "composite_bow": {"name": "Composite Bow", "attacks": 1, "short": 15, "medium": 30, "ap": 1},
         "lance": {"name": "Lance", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
         "longsword": {"name": "Longsword", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "rending"}]},
@@ -85,6 +87,14 @@
         },
         "light_infantry": {
             "name": "Light Infantry",
+            "hidden": false,
+            "description_short": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
+            "description": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
+            "flavor": "This unit can choose to fight as skirmishers as a loose formation, or 'close up' to fight as traditional infantry.",
+            "points": [1]
+        },
+        "light_cavalry": {
+            "name": "Light Cavalry",
             "hidden": false,
             "description_short": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",
             "description": "Optional +1 Save to ranged hits at ranges further than 12', -1 Save to Melee",

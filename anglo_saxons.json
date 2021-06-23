@@ -3,26 +3,32 @@
     "name": "Anglo Saxons",
     "subfactions": {
         "merica": {
-            "name": "Merica (700-1066)",
+            "name": "Merica (700-1034)",
             "phase": "activation",
             "id": "merica",
             "background": "This kingdom was the domiant or second most domiant among the Anglo-Saxons from  roughly 600 to 900 AD, reaching it's peak under the reign of King Offa (reigned 757 to 796). His death saw the decline of the kingdom, as through intermarriage and conquest it became a powerful part of Wessex. The kingdom stopped being distinct, even as a vassal, around 900 AD."
         }
     ,
         "wessex": {
-            "name": "Wessex (700-1066)",
+            "name": "Wessex (700-1034)",
             "phase": "activation",
             "id": "wessex",
             "background": "From the 800s to late 1000s, with the arrival of the Normons, this was the dominant kingdom. Wessex had such power, that after 900, kingdoms like Kent and Sussex were simply 'Greater Wessex'."
         }
     ,
         "late_kent": {
-            "name": "Kent (793-1066)",
+            "name": "Kent (793-1034)",
             "phase": "activation",
             "id": "late_kent",
             "background": "Late Kent was a weaker, less accomplished, but proud kingdom."
         }
         ,
+        "anglo_danes": {
+            "name": "Anglo-Danes/English (1016 to 1066)",
+            "phase": "activation",
+            "id": "anglo_danes",
+            "background": "The Danes, managed to conquer the Anglo-Saxons, and after the death of their leader and a rebellion among the various subjects, a new king rose to unite all the holdings. Even after the Danes, Norse, and other peoples were driven out a second time, the culture of the Anglo-Saxons had changed greatly. Many of their elite warriors were now 'Housecarls', much of the land was under the 'Danelaw', and the new introduced culture, like the Saxons, blended in and became an important part of the regional culture and identity."
+        },
         "anglian_kingdoms_heptarchy": {
             "name": "Anglian Kingdoms Heptarchy (600-700 AD)",
             "phase": "activation",
@@ -34,7 +40,7 @@
         "low_bordweall": {
             "name": "Ceorl Bordweall",
             "description": "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
-            "subfactions": ["merica", "wessex", "late_kent", "none"],
+            "subfactions": ["merica", "wessex", "late_kent", "none", "anglo_danes"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -60,7 +66,7 @@
         "great_bordweall": {
             "name": "Thegn Bordweall",
             "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
-            "subfactions": ["wessex", "late_kent", "none"],
+            "subfactions": ["wessex", "late_kent", "none", "anglo_danes"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -88,6 +94,7 @@
         "merican_thegn": {
             "name": "Merican Thegn Bordweall",
             "description": "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
+            "subfactions": ["merica"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -158,6 +165,7 @@
         "huscarl": {
             "name": "Huscarls",
             "description": "A 'housecarl' (Old Norse húskarl, Old English huscarl, translates to 'house man'), was a type of 'retainer' and loyal fighting man, much like many of the minor nobility. What made the Huscarl special, was how it was a mixture of the cultural tradition of the Saxon gedribt 'hearthguard' and the Norse 'hindmen'.",
+            "subfactions": ["anglo_danes", "none"],
             "category": "elite",
             "min": 1,
             "max": 2,
@@ -175,12 +183,14 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"
+                    "weapons": ["spartha", "shield"
                     ],
                     "options": [
                         {"addWeapon": "javelin"},
-                        {"replaceWeapon": ["spear", "shield"],
-                            "withWeapon": ["two_handed_axe"]}
+                        {"replaceWeapon": ["spartha", "shield"],
+                            "withWeapon": ["two_handed_axe"]},
+                            {"replaceWeapon": ["spartha"],
+                                "withWeapon": ["hand_axe"]}  
                     ],
                     "min": 5,
                     "max": 10
@@ -321,11 +331,73 @@
                 }
             ]
         },
+        "heavy_hearthguard": {
+            "name": "Heavy Hearthguard",
+            "description": "The Gedribt/Gedriht (pronounced Tedrict/Yedrict) were like the 'Angle' lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "category": "elite",
+            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Gedribt",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "shield"
+                    ],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "compainions": {
+            "name": "Lord's Companions",
+            "description": "After the Angles, Britians, and Saxons merged into a single culture, it is not clear what the warrior elite serving the local 'count', 'king', 'aetheling',or 'ealdorman', were known as. Some sources call these men 'Companions', 'Hearthguard', or 'Royal Bodyguard', but these terms are clearly not from the time period. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.", 
+            "category": "elite",
+            "subfactions": ["anglian_kingdoms_heptarchy", "late_kent", "merica", "wessex"],
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Hearthguard",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "shield"
+                    ],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "earl": {
             "name": "Eorl",
-            "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
+            "description": "Below the rank of 'king', there was the rank of 'eorl' (Later Earl, which was a had a common shared ancestor  with the word 'Jarl), which signified a powerful leader with much land and power (Such as a duke). Such powerful noble leaders often lead armies in the place of the King himself.",
             "category": "command",
-            "subfactions": ["late_kent", "merica", "wessex", "none"],
+            "subfactions": ["anglo_danes", "none"],
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
@@ -355,7 +427,7 @@
             "name": "Ealdorman",
             "description": "Below the Eorls were the Ealdormen, who were the appointed rulers of 'shires' and/or members of previously defeated royal families. As such, not every Ealdorman was equal, with the previous leaders of kingdoms having remained part of their power, just with a new King ruling over them. This position was political and not a social rank.",
             "category": "command",
-            "subfactions": ["late_kent", "merica", "wessex", "none"],
+            "subfactions": ["late_kent", "merica", "wessex", "none", "anglo_danes"],
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
@@ -410,7 +482,7 @@
             "name": "Cyning",
             "description": "The term 'Cyning', is a sibling word of 'king' and as such has the same meaning. As such, the 'Cyning' ruled over a 'Cyningdom', of which there was many before any specific Cyningdom was able to conquer the others.",
             "category": "command",
-            "subfactions": ["anglian_kingdoms_heptarchy"],
+            "subfactions": ["anglian_kingdoms_heptarchy","late_kent", "merica", "wessex"],
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader", "buckler"],

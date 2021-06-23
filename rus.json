@@ -1,0 +1,569 @@
+{
+    "id": "rus",
+    "name": "Rus",
+    "notes": "Note to self, vikings almost never used two-handed swords, and the hand-axe was way more plentiful then the sword was. Swords were mostly imported or they somewhat cut corners on them if they made them locally. The spear was the main weapon, the shield was somewhat flimsy but of reasonable size.",
+    "subfactions": {
+        "rus": {
+            "name": "Pagan Rus (750-950)",
+            "phase": "activation",
+            "id": "rus",
+            "background": "The 'Varangians' (Groups of invading Swedes), invaded during this period and intermarriaged over time with the local Slavic peoples. Historians are perplexed by sources that state these people (Slavic and Swedes) were ruled by a 'Khagan', which is a word from the nomadic 'Khazars'. The leading theory is a Swede ruler took up the title as it was fairly local and impressive sounding. The Kievan Rus came after and was founded with the conquest of Kiev by Oleg of Novgorod (Rurik Dynasty) in 882."
+        },
+        "rus_princes": {
+            "name": "Rus Princes (950-110)",
+            "phase": "activation",
+            "id": "rus_princes",
+            "background": ""
+        }
+    },
+    "units": {
+        "ceorl": {
+            "name": "Ceorl Militia",
+            "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. In exchange for their lands and their freedom, these people serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but pay taxes in return for protection.",
+            "subfactions": ["norse"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "shield", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceorl",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+            "tribal_spears": {
+                "name": "Tribal Allies",
+                "description": "",
+                "category": "rare",
+                "min": 1,
+                "max": 1,
+                "rules": ["warband", "shield", "if_it_bleeds", "light_infantry"],
+                "keywords": ["Infantry"],
+                "models": [
+                    {
+                        "name": "Tribal",
+                        "courage": 4,
+                        "movement": 6,
+                        "shoot": 5,
+                        "fight": 5,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "wounds": 1,
+                        "weapons": ["spear", "javelin", "shield"],
+                        "options": [{"replaceWeapon": "spear", 
+                            "withWeapon": ["hand_axe"]}],
+                        "min": 5,
+                        "max": 10
+                    }
+                ]
+            },
+            "tribal_archers": {
+                "name": "Tribal Skirmisher Allies",
+                "description": "",
+                "category": "rare",
+                "min": 1,
+                "max": 1,
+                "rules": ["warband", "shield", "if_it_bleeds", "light_infantry"],
+                "keywords": ["Infantry"],
+                "models": [
+                    {
+                        "name": "Tribal",
+                        "courage": 4,
+                        "movement": 6,
+                        "shoot": 5,
+                        "fight": 4,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "wounds": 1,
+                        "weapons": ["spear", "javelin", "shield"],
+                        "options": [{"replaceWeapon": "shield", 
+                            "withWeapon": ["bow"]}],
+                        "min": 5,
+                        "max": 10
+                    }
+                ]
+            },
+        "skirmishers": {
+            "name": "Lowborn Skirmishers",
+            "description": "A band of the impoverished, landless (Who, if Thralls, would be slaves or tied to the land), men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. Among the Norse, these people could be the slaves (Thralls) and the freed slaves (Leysingi), but they also had subject Irish and Scots fight within the ranks of the skirmishers as well.",
+            "subfactions": ["norse", "harald_hardråde"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Lowborn",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["javelin", "hand_weapon"],
+                    "options": [{"replaceWeapon": "javelin", "withWeapon": {"AddRule": "buckler"}}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "smerd": {
+            "name": "Smerd Militia",
+            "description": "The 'Smerds' ('ordinary man' or 'dependent man') were effectively common peasants, and were supposed to be freemen as well, but with less rights then many other areas of Europe and increasingly less free over time.",
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Smerd",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "spear", "shield"],
+                    "options": [{"replaceWeapon": "hand_weapon", 
+                        "withWeapon": ["javelin"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "smerd_archer": {
+            "name": "Smerd Archer Militia",
+            "description": "The 'Smerds' ('ordinary man' or 'dependent man') were effectively common peasants, and were supposed to be freemen as well, but with less rights then many other areas of Europe and increasingly less free over time.",
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "light_infantry"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Smerd",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "bow"],
+                    "options": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "rus_town_militia": {
+            "name": "Rus Town Militia",
+            "description": "The Kevian Rus and prior Rus, contained a number of valuable trade routes and had fairly reasonable or even large towns or cities built next to rivers or excellent ports. This allowed a middle class of tradesmen, craftsmen, and merchants who had strong reason to protect their property and way of life.",
+            "category": "core",
+            "subfactions": ["rus_princes"],
+            "min": 1,
+            "max": 1,
+            "rules": ["if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Militia",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "spear", "shield"],
+                    "options": [{"replaceWeapon": "hand_weapon", 
+                        "withWeapon": ["javelin"]},
+                    {"addRule": "light_armor"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "rus_spearmen": {
+            "name": "Rus Spear Garrison",
+            "description": "Not very professional soldier was a noble, and some sons of nobles weren't of very high status. There is some record of professional freeman warriors.",
+            "category": "rare",
+            "subfactions": ["rus_princes"],
+            "min": 1,
+            "max": 1,
+            "rules": ["if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "spear", "shield"],
+                    "options": [{"replaceWeapon": "hand_weapon", 
+                        "withWeapon": ["javelin"]},
+                    {"addRule": "light_armor"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "norse_youngmen": {
+            "name": "Youngmen Warriors",
+            "description": "According to some written sources, the Norse and Vikings were organized like the Saxons were during their early raiding days. As such, younger men seeking fame and plunder would form into bands with the most charismatic as their leader. Eventually, with enough experience and renown, they could lead their own bands, or join a more accomplished one.",
+            "subfactions": ["rus"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "fierce", "if_it_bleeds"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Youngman Varangians",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield", "hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "spear", 
+                            "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "experienced_raiders": {
+            "name": "Veteran Norse Raiders",
+            "description": "Besides the younger men, are the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Viking, Norse, or Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
+            "subfactions": ["rus"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "stubborn"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Veteran Varangians",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["spear", "shield", "hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "spear", 
+                            "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                        }
+            ]
+        },
+        "varjazi": {
+            "name": "Varjazi",
+            "description": "Varjazi (Company under oath), appear to be a term that is sometimes interchangable with 'Druzhina' and is used here to refer to professial ,and/or noble, heavy infantry ", 
+            "category": "elite",
+            "min": 1,
+            "max": 1,
+            "rules": ["fanatic"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Varangian",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_axe", "shield"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "shield", 
+                            "withWeapon": ["two_handed_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+    "veteran_druzhina": {
+        "name": "Veteran Druzhina",
+        "description": "The Druzhina were likely Varangian Warriors, who served the local 'prince', 'king', 'Knyaz', 'Khan', or 'Khagan'. Depending on year and historical interpretation, these men were either warrior nobles or non-noble warrior professionals. All sources agree they were excellent fighters, and were trusted with protecting their master.", 
+        "subfactions": ["rus_princes"],
+        "category": "elite",
+        "min": 1,
+        "max": 1,
+        "rules": ["fanatic"],
+        "keywords": [
+            "Cavalry "
+        ],
+        "models": [
+            {
+                "name": "Varangian Druzhina",
+                "courage": 6,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "shield"
+                ],
+                "options": [{"addWeapon": "javelin"}, {"addWeapon": "spear"},
+                    {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"]}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "later_druzhina": {
+        "name": "Junior_Druzhina",
+        "description": "The Druzhina were likely Varangian Warriors, who served the local 'prince', 'king', 'Knyaz', 'Khan', or 'Khagan'. Depending on year and historical interpretation, these men were either warrior nobles or non-noble warrior professionals. All sources agree they were excellent fighters, and were trusted with protecting their master.", 
+        "subfactions": ["rus_princes"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": ["stubborn"],
+        "keywords": [
+            "Cavalry "
+        ],
+        "models": [
+            {
+                "name": "Varangian Druzhina",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "shield"
+                ],
+                "options": [{"addWeapon": "javelin"}, {"addWeapon": "spear"}, 
+                    {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"]}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "druzhina": {
+        "name": "Junior_Druzhina",
+        "description": "The Druzhina were likely Varangian Warriors, who served the local 'prince', 'king', 'Knyaz', 'Khan', or 'Khagan'. Depending on year and historical interpretation, these men were either warrior nobles or non-noble warrior professionals. All sources agree they were excellent fighters, and were trusted with protecting their master.", 
+        "subfactions": ["rus_princes", "rus"],
+        "category": "elite",
+        "min": 1,
+        "max": 1,
+        "rules": ["stubborn"],
+        "keywords": [
+            "Cavalry "
+        ],
+        "models": [
+            {
+                "name": "Varangian Druzhina",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "shield"
+                ],
+                "options": [{"addWeapon": "javelin"}, {"addWeapon": "spear"}, 
+                    {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"]}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "steppe_nomad_archer": {
+        "name": "Steppe Nomad Mounted Archer",
+        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
+        "subfactions": ["rus_princes"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": ["light_cavalry", "buckler"],
+        "keywords": [
+            "Cavalry"
+        ],
+        "models": [
+            {
+                "name": "Steppe Nomads",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "bow"
+                ],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "steppe_nomad_cavalry": {
+        "name": "Steppe Nomad Cavalry",
+        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
+        "subfactions": ["rus_princes"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": ["light_cavalry", "buckler"],
+        "keywords": [
+            "Cavalry"
+        ],
+        "models": [
+            {
+                "name": "Steppe Nomads",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "javelin"
+                ],
+                "options": [
+                    [{"replaceWeapon": "javelin"}, {"withWeapon": "spear"}],
+                [{"replaceRule": "buckler"}, {"withRule": "shield"}]
+                ],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "knyaz": {
+        "name": "Prince",
+        "description": "The Prince (Knyaz) ruled like a king and had his center of power around a major trading city. His status is very similar to the earlier Jarls and many of these princes were desendents of Swede nobility. This unit could also represent a 'Voi-vode' (army, to lead), who would lead an army for the local prince.",
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 2}, "leader"],
+        "keywords": ["Infantry"],
+        "models": [
+            {
+                "name": "Knyaz/Voivode",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 8,
+                "wounds": 3,
+                "weapons": ["spear", "shield"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": ["spear", "shield"], 
+                        "withWeapon": ["two_handed_axe"]}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    },
+    "hersir": {
+        "name": "Hersir",
+        "description": "The Hersirs were mean who were trusted by their Jarl to organize a portion of his hands, to protect him, and avenge his death if need be. Many Hersirs had their own personal armies and a group or groups of hindmen as bodyguards.",
+        "category": "command",
+        "min": 1,
+        "max": 1,
+        "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader"],
+        "keywords": ["command"],
+        "models": [
+            {
+                "name": "Hersir",
+                "courage": 6,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 7,
+                "wounds": 2,
+                "weapons": ["spartha", "shield"],
+                "options": [{"addRule": "war_horse"},
+                    {"replaceWeapon": "shield", 
+                        "withWeapon": ["two_handed_axe"]}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+    }
+},
+    "weapons": {},
+    "rules": {
+        "fierce": {
+            "name": "Fierce",
+            "hidden": false,
+            "description_short": "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "description":  "If an enemy unit in short distence (12') runs away or flees, this unit has to charge them. It gets +1 to melee when it does so",
+            "flavor":"During the early Dark Ages, some units were exceptionally eager to 'run down' or 'run through' the enemy.",
+            "points": [-1]},
+        "harder_than_iron": {
+                "name": "Harder Than Iron",
+                "hidden": false,
+                "description_short": "When 'Berserking', this unit gets +1 saves.",
+                "description":  "",
+                "flavor":"",
+                "points": ["constants.defenseCost"]},
+    "relics": [],
+    "strategies": [{
+        "subfactions": ["rus", "rus_princes"],
+        "name": "Shield Wall",
+        "phase": "activation",
+        "description": "One choosen unit with shields and spears equipped (Provided it's not 'Tribal'), if that unit moved one or no times this round, and if charged or targeted by a shooting attack it gets +1 Save. This effect remains in place till the unit moves.",
+        "cost": 1
+    },{
+        "subfactions": ["rus"],
+        "name": "Veterans",
+        "phase": "activation",
+        "description": "All units of 'Raiders' or 'Varangians' may, once for the entire battle, choose to reroll all their dice to hit by shooting or melee. All dice must be rerolled, good or bad.",
+        "cost": 1
+}
+,{
+    "subfactions": ["rus"],
+    "name": "Boar Snout",
+    "phase": "activation",
+    "description": "A selected unit gains +1 AP for all their melee weapons, during a charge.",
+    "flavor": "",
+    "cost": 1
+}
+,{
+    "subfactions": ["rus"],
+    "name": "Going Berserk",
+    "phase": "activation",
+    "description": "A selected unit gains +1 Strength till the end of the turn, but they can't use the turn to move away from the closest enemy.",
+    "flavor": "",
+    "cost": 1
+}
+]}}
