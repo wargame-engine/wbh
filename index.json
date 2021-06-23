@@ -4,13 +4,14 @@
         "anglo_saxons": {"name": "Anglo Saxons", "id": "anglo_saxons", "url": "anglo_saxons.json", "color": "#436497", "alliance": "north_sea"},
         "saxons": {"name": "Saxons", "id": "saxons", "url": "saxons.json", "color": "#594228"},
         "franks": {"name": "Franks", "id": "franks", "url": "franks.json", "color": "#6372AA"},
-        "normans": {"name": "Normans", "id": "normans", "url": "normans.json", "color": "#6372AA", "secondary_color": "#BDBDBD", "alliance": "north_sea"},
+        "normans_bretons": {"name": "Normans and Bretons", "id": "normans_bretons", "url": "normans.json", "color": "#6372AA", "secondary_color": "#BDBDBD", "alliance": "north_sea"},
+        "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"},
         "norse": {"name": "Norse", "id": "norse", "url": "norse.json", "color": "#6372AA", "secondary_color": "9f0807", "alliance": "north_sea"}
     },
     "alliances": {"north_sea": {"name": "Danelaw/North Sea Empire"}},
     "unfinished_factions": {
         "poles": {"name": "Poles", "id": "poles", "url": "poles.json", "color": "#D83658", "alliance": "north_sea"},
-        "romano_british": {"name": "Romano-British/Brittany", "id": "romano_british", "url": "romano_british.json", "color": "#436497"}
+        "rus": {"name": "Rus", "id": "rus", "url": "rus.json", "color": "#D83658"}
     },
     "categories": {
         "command": {"name": "Command"},
