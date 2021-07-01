@@ -42,7 +42,7 @@
         "pike": {"name": "Pike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 2}]},
         "crossbow": {"name": "Crossbow", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["indirect", "reload"]},
         "javelin": {"name": "Javelins", "attacks": 1, "short": 12, "ap": 1, "rules": ["assault"]},
-        "plumbata": {"name": "Plumbata", "attacks": 1, "short": 6, "ap": 2, "rules": [{"id": "sling_volley"}, "assault"]},
+        "plumbata": {"name": "Plumbata", "attacks": 1, "short": 6, "ap": 2, "rules": [{"id": "rapid_fire"}, "assault"]},
         "heavy_throwing_spear": {"name": "Heavy Throwing Spears", "attacks": 1, "short": 12, "ap": 2, "rules": ["assault"]},
         "bow": {"name": "Bow", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "sling": {"name": "Sling", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "sling_volley"}]},
